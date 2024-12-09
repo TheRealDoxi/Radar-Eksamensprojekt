@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Hvis du bruger Inter font */
+    background-color: #0A0C10; /* Baggrundsfarve */
+    height: auto; /* Lad body have automatisk højde */
+    overflow: auto; /* Sørg for, at footer ikke bliver skjult */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A0C10;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px; /* Juster højden på logoet */
+    width: auto;  /* Bevarer billedets proportioner */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Holder punkterne på en linje */
+    gap: 50px; /* Mere plads mellem menupunkterne */
+    margin: 0;
+    padding: 25px 70px; /* Indre afstand i boksen */
+    background-color: rgba(114, 89, 89, 0.2); /* Grå baggrund med 20% opacitet */
+    border-radius: 20px; /* Afrundede hjørner */
+    border: 0.01px solid rgba(255, 255, 255, 0.205); /* Hvid ramme med standard tykkelse (kan ændres) */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.884);
+    font-size: 1.2em;
+    padding: 10px 15px; /* Klikområde omkring menupunkterne */
+    transition: background-color 0.9s ease; /* Glidende hover-effekt */
+}
+
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons .login,
+.buttons .signup {
+    background-color: #0A0C10;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.buttons .signup {
+    background-color: #A41045;
+    border-radius: 20px; /* Afrundede hjørner */
+    padding: 13px 15px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger .line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out; /* Tilføj en smooth transition for animationen */
+}
+
+/* Når burger-menuen er toggled (åben) */
+.burger.toggle .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* Første linje roteres og flyttes */
+}
+
+.burger.toggle .line:nth-child(2) {
+    opacity: 0; /* Anden linje bliver usynlig */
+}
+
+.burger.toggle .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg); /* Tredje linje roteres og flyttes */
+}
+
+
+/* Sørg for, at section fylder hele højden fra headeren og ned */
+.gradient-baggrund {
+    position: relative;
+    width: 100%;
+    height: calc(300vh - 300px); /* Juster højden for at tage højde for headerens højde */
+    overflow: hidden; /* Sørg for, at billedet ikke går ud over section */
+}
+
+/* Gør billedet responsivt og fyldende */
+.gradient-baggrund img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:-1; /* Sørger for, at billedet er bag indholdet i section */
+}
+
+
+
+
+/* Generel footer-stil */
+.footer {
+    background-color: #0A0C10;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centrerer alt indhold horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
+}
+
+/* Footer-container, som holder logo og kolonner */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrerer logo og kolonner vertikalt */
+    max-width: 1200px; /* Maksimal bredde på footer */
+    width: 100%; /* Gør, at footer fylder 100% af bredden */
+}
+
+/* Logo til venstre */
+.footer-logo {
+    flex-shrink: 0; /* Forhindrer, at logoet ændrer størrelse */
+    margin-right: 40px; /* Afstand mellem logo og kolonner */
+}
+
+.footer-logo img {
+    height: 150px; /* Juster højden på logoet */
+    width: auto;
+}
+
+/* Kolonne-stil */
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #A41045;  /* Ændrer farve på hover */
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Ikonerne skal være hvide */
+.social-media-icons a i {
+    font-size: 2em; /* Størrelse på ikonerne */
+    color: white;
+    transition: color 0.3s ease; /* Glidende effekt på hover */
+}
+
+/* Ikonerne ændrer farve ved hover */
+.social-media-icons a:hover i {
+    color: #A41045; /* Ændrer farve ved hover */
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 315px;
+        background-color: #0A0C10;
+        width: 35%;
+        padding: 5px; 
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px; /* Afstand under logoet på små skærme */
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-media-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+}
