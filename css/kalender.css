@@ -1,0 +1,114 @@
+/* Flex-container for at arrangere indholdet horisontalt */
+.flex-container {
+    display: flex; /* Gør så elementerne ligger i en række */
+    align-items: flex-start; /* Sørger for, at indholdet er aligned til toppen */
+    justify-content: space-between; /* Giver jævnt mellemrum mellem de to sektioner */
+    padding: 50px; /* Indre afstand */
+    color: white; /* Hvid tekst */
+    gap: 50px; /* Giver afstand mellem tekst og kalender */
+    margin-top: 100px; /* Øverste margin */
+}
+
+/* Justering af tekst-sektionen */
+.text-content {
+    max-width: 40%; /* Sætter bredden på tekst-sektionen */
+}
+
+.text-content h1 {
+    font-size: 4.5em; /* Stor overskrift */
+    line-height: 1.2;
+    margin-bottom: 0px;
+    padding-left: 100px;
+}
+
+.text-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    padding: 10px 0;
+    padding-left: 100px;
+}
+
+/* Kalender container */
+.calendar-container {
+    text-align: center;
+    background: #424345;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Kalenderens max-bredde */
+}
+
+/* Kalenderens måned overskrift */
+.calendar-month {
+    font-size: 2.2em;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Weekday headers */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-size: 1.2em;
+    color: #A41045;
+    margin-bottom: 10px;
+}
+
+/* Kalender grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+/* Days */
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #f9f9f900;
+    color: #000000;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effekt på dagene */
+.day:hover {
+    background-color: #A41045; 
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for den valgte dato */
+.day.selected {
+    background-color: #A41045;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Knap */
+.select-button {
+    background-color: #A41045;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-top: 20px; /* Afstand mellem kalender og knap */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Knap hover effekt */
+.select-button:hover {
+    background-color: #C32B59;
+    transform: translateY(-2px);
+}
+

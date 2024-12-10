@@ -67,7 +67,7 @@
 
 .artists-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 10px; /* Mellemrum mellem kortene */
     flex-wrap: wrap; /* Tillader at kortene går til en ny linje på små skærme */
     padding: 50px;
@@ -222,6 +222,18 @@ p {
     height: auto; /* Bevarer proportionerne */
     border-radius: 10px; /* Bløder billedets kanter op */
     margin-right: -20px; /* Rykker billedet længere til venstre */
+}
+
+.playliste-section p a {
+    text-decoration: underline; /* Understreger linket */
+    color: #A41045; /* Farve på teksten - du kan ændre denne til hvad du ønsker */
+    font-weight: bold; /* Gør teksten fed (kan fjernes, hvis du ønsker en mere diskret stil) */
+    transition: all 0.3s ease; /* Smooth transition til hover-effekt */
+}
+
+.playliste-section p a:hover {
+    color: #C32B59; /* Ændrer farven ved hover */
+    text-decoration: none; /* Fjern understrygningen på hover */
 }
 
 

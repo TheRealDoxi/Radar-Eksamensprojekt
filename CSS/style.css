@@ -16,6 +16,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     color: white;
+    position: relative;
 }
 
 .navbar .logo {
@@ -54,7 +55,6 @@ body {
     transition: background-color 0.9s ease; /* Glidende hover-effekt */
 }
 
-
 .buttons {
     display: flex;
     gap: 10px;
@@ -62,9 +62,6 @@ body {
 
 .buttons .login,
 .buttons .signup {
-    background-color: #0A0C10;
-    color: white;
-    border-radius: 20px; /* Afrundede hjørner */
     padding: 5px 10px;
     cursor: pointer;
     font-size: 1.2em;
@@ -72,6 +69,13 @@ body {
 
 .buttons .signup {
     background-color: #A41045;
+    border-radius: 20px; /* Afrundede hjørner */
+    padding: 13px 15px;
+}
+
+.buttons .login {
+    background-color: #0A0C10;
+    color: white;
     border-radius: 20px; /* Afrundede hjørner */
     padding: 13px 15px;
 }
@@ -91,19 +95,17 @@ body {
 }
 
 /* Når burger-menuen er toggled (åben) */
-.burger.toggle .line:nth-child(1) {
+.burger.toggle .burgerline:nth-child(1) {
     transform: translateY(10px) rotate(45deg); /* Første linje roteres og flyttes */
 }
 
-.burger.toggle .line:nth-child(2) {
+.burger.toggle .burgerline:nth-child(2) {
     opacity: 0; /* Anden linje bliver usynlig */
 }
 
-.burger.toggle .line:nth-child(3) {
+.burger.toggle .burgerline:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg); /* Tredje linje roteres og flyttes */
 }
-
-
 
 /* Generel footer-stil */
 .footer {
@@ -115,7 +117,6 @@ body {
     align-items: center; /* Centrerer indholdet vertikalt */
 }
 
-/* Footer-container, som holder logo og kolonner */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -124,7 +125,6 @@ body {
     width: 100%; /* Gør, at footer fylder 100% af bredden */
 }
 
-/* Logo til venstre */
 .footer-logo {
     flex-shrink: 0; /* Forhindrer, at logoet ændrer størrelse */
     margin-right: 40px; /* Afstand mellem logo og kolonner */
@@ -135,7 +135,6 @@ body {
     width: auto;
 }
 
-/* Kolonne-stil */
 .footer-columns {
     display: flex;
     justify-content: space-between;
@@ -193,16 +192,17 @@ body {
 }
 
 
+/* Responsiv styling */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 90px;
-        left: 315px;
+        left: 20px;
         background-color: #0A0C10;
-        width: 35%;
-        padding: 5px; 
+        width: 80%;
+        padding: 10px; 
     }
 
     .nav-links.active {
@@ -236,12 +236,18 @@ body {
         text-align: center;
     }
 
-    .social-icons {
-        justify-content: center;
-    }
-
     .social-media-icons {
         justify-content: center;
         gap: 15px;
+    }
+
+    .footer-column ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column li {
+        margin-bottom: 5px;
     }
 }

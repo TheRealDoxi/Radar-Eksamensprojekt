@@ -55,6 +55,39 @@
 }
 
 
+.image-frame {
+    max-width: 900px; /* Begræns den maksimale bredde */
+    max-height: 900px;
+    border: 5px solid #575151; /* Flot grå ramme */
+    border-radius: 10px; /* Bløde hjørner */
+    padding: 0px; /* Plads mellem billedet og rammen */
+    display: block; /* Centerer billedet med margin */
+    margin: 20px auto; /* Gør billedet centreret horisontalt */
+    width: 50vw; /* Billedet bliver halvdelen af vinduets bredde */
+}
+
+
+
+.text-section-omradar {
+    font-family: 'inter', sans-serif; /* Moderne font */
+    color: #ffffff; /* Mørk grå for bedre læsbarhed */
+    line-height: 1.8; /* Øger linjeafstanden */
+    background-color: #33333346; /* Lys baggrund for kontrast */
+    padding: 20px; /* Giver luft omkring teksten */
+    border-radius: 15px; /* Bløde hjørner */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtil skygge */
+    max-width: 800px; /* Begrænser tekstens bredde for læsevenlighed */
+    margin: 20px auto; /* Centrerer sektionen */
+}
+
+.text-section-omradar p {
+    margin-bottom: 15px; /* Plads mellem afsnit */
+}
+
+.text-section-omradar p:last-child {
+    margin-bottom: 0; /* Fjerner ekstra plads efter sidste afsnit */
+}
+
 
 @media (max-width: 768px) {
     .flex-container-omradar {
