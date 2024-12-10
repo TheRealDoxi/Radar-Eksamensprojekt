@@ -67,7 +67,7 @@
 .artists-container {
     display: flex;
     justify-content: space-between;
-    gap: 30px; /* Mellemrum mellem kortene */
+    gap: 10px; /* Mellemrum mellem kortene */
     flex-wrap: wrap; /* Tillader at kortene går til en ny linje på små skærme */
     padding: 50px;
 }
@@ -87,6 +87,8 @@
 }
 
 .artist-image {
+    display: flex;
+    align-items: center;
     width: 120px;
     height: 120px;
     margin: 0 auto 20px;
@@ -165,7 +167,40 @@ p {
 
 .text-content-playliste {
     max-width: 50%; /* Sørg for, at teksten ikke fylder for meget */
+    text-align: left;
 }
+
+
+.playliste-section {
+    margin-top: 20px;
+}
+
+.playliste-section p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    position: relative; /* Sørger for, at den cirkulære knap kan placeres relativt til denne container */
+}
+
+.line {
+    width: 100%; /* Linjen fylder hele bredden af containeren */
+    height: 2px; /* Tykkelsen på linjen */
+    background-color: #808080; /* Grå farve */
+    border-radius: 50px; /* Cirkulær ende til venstre */
+    position: relative;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: -10px; /* Fjerner lidt fra venstre side for at skabe en cirkulær ende */
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #808080; /* Grå farve */
+    border-radius: 50%; /* Cirkulær form */
+    transform: translateY(-50%);
+}
+
 
 .text-content-playliste h1 {
     font-size: 2.5em; /* Stor overskrift */
@@ -180,7 +215,7 @@ p {
 }
 
 .image-content-playliste img {
-    max-width: 100%; /* Gør billedet responsivt */
+    max-width: 70%; /* Gør billedet responsivt */
     height: auto; /* Bevarer proportionerne */
     border-radius: 10px; /* Bløder billedets kanter op */
     margin-right: -20px; /* Rykker billedet længere til venstre */
