@@ -5,6 +5,8 @@
     padding: 50px; /* Giver indre afstand */
     color: white; /* Hvid tekst */
     gap: 30px; /* Afstand mellem tekst og billede */
+    margin-top: 100px;
+
 }
 
 .text-content {
@@ -12,9 +14,9 @@
 }
 
 .text-content h1 {
-    font-size: 2.5em; /* Stor overskrift */
-    margin-bottom: 20px;
+    font-size: 4.5em; /* Stor overskrift */
     line-height: 1.2;
+    margin-bottom: 0px;
 }
 
 .text-content p {
@@ -24,7 +26,7 @@
 }
 
 .image-content img {
-    max-width: 100%; /* Gør billedet responsivt */
+    max-width: 150%; /* Gør billedet responsivt */
     height: auto; /* Bevarer proportionerne */
     border-radius: 10px; /* Bløder billedets kanter op */
     margin-right: -20px; /* Rykker billedet længere til venstre */
@@ -38,7 +40,7 @@
     display: flex; /* Aktiverer flexbox */
     align-items: center; /* Vertikal centreret */
     justify-content: center; /* Horisontal centering */
-    height: 50vh; /* Fylder hele skærmhøjden */
+    height: 25vh; /* Fylder hele skærmhøjden */
     padding: 50px; /* Giver indre afstand */
     color: white; /* Hvid tekst */
     gap: 30px; /* Afstand mellem tekst og billede */
@@ -50,15 +52,14 @@
 }
 
 .text-content-artister h1 {
-    font-size: 4.5em; /* Stor overskrift */
-    margin-bottom: 50px;
+    font-size: 4.5em;
+    margin-bottom: 40px; /* Reduceret margin */
     line-height: 1.2;
 }
 
 .text-content-artister p {
-    font-size: 1.2em; /* Lidt mindre tekst */
-    line-height: 1.6; /* Lidt mere luft mellem linjer */
-    padding: 10px 0; /* Lidt ekstra plads omkring teksten */
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
 
@@ -89,8 +90,8 @@
 .artist-image {
     display: flex;
     align-items: center;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     margin: 0 auto 20px;
     overflow: hidden; /* Skjuler alt udenfor den cirkulære form */
     border-radius: 50%; /* Gør billedet rundt */
@@ -119,11 +120,13 @@ p {
 .artist-card a {
     text-decoration: none; /* Fjerner understregning fra link */
     color: inherit; /* Bevarer farven fra teksten */
+    gap: 20px;
 }
 
 .artist-card a p {
     color: #bbb; /* Ændrer farven på linket til lys grå */
     transition: color 0.3s ease; /* Tilføjer en overgangseffekt */
+    gap: 20px;
 }
 
 .artist-card a:hover p {

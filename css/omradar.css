@@ -1,0 +1,68 @@
+.flex-container-omradar {
+    display: flex; /* Aktiverer flexbox */
+    flex-direction: column; /* Stabler elementerne vertikalt */
+    align-items: center; /* Centrerer dem horisontalt */
+    gap: 30px; /* Afstand mellem elementerne */
+    color: #ffffff79;
+}
+
+.text-content-omradar h1 {
+    margin-bottom: 20px; /* Afstand til billedet */
+    text-align: center;
+    display: flex;
+    font-size: 6vh;
+    color: white;
+}
+
+.image-content-omradar img {
+    max-width: 100%;
+    height: auto; /* Bevarer billedets proportioner */
+    border-radius: 10px; /* Bløde kanter */
+}
+
+.text-content-omradar p {
+    display: flex; /* Brug flexbox for centreret layout */
+    justify-content: center; /* Horisontal centrering */
+    align-items: center; /* Vertikal centrering */
+    text-align: center; /* Centrer tekstlinjer */
+    max-width: 80%; /* Gør teksten lettere at læse ved at reducere bredden */
+    margin: 0 auto; /* Centrer containeren horisontalt */
+    padding: 20px 0; /* Giv lidt luft omkring teksten */
+}
+
+
+
+/* Styling af knappen */
+.read-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Afstand til kortene */
+}
+
+.read-more-button {
+    background-color: #A41045; /* Farven på knappen */
+    color: white; /* Hvid tekst */
+    padding: 15px 30px; /* Polstring omkring teksten */
+    font-size: 1.2em; /* Størrelse på tekst */
+    text-decoration: none; /* Fjerner understregning */
+    border-radius: 30px; /* Runde hjørner */
+    transition: background-color 0.3s ease; /* Effekt ved hover */
+}
+
+/* Hover-effekt på knappen */
+.read-more-button:hover {
+    background-color: #8c0f36; /* Ændrer farven når man hover */
+}
+
+
+
+@media (max-width: 768px) {
+    .flex-container-omradar {
+        flex-direction: column; /* Stabler elementerne vertikalt */
+        gap: 20px; /* Reducer afstand for små skærme */
+    }
+
+    .text-content-omradar {
+        text-align: center; /* Centrer teksten kun på små skærme */
+    }
+}
