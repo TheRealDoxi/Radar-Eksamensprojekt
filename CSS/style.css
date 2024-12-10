@@ -2,6 +2,10 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif; /* Hvis du bruger Inter font */
     background-color: #0A0C10; /* Baggrundsfarve */
+    background-image: url('/img/gradient2.jpg');
+    background-size: cover; /* Sørg for, at billedet fylder hele området */
+    background-repeat: no-repeat; /* Undgå gentagelse af billedet */
+    background-position: center center; /* Juster billedet til midten */
     height: auto; /* Lad body have automatisk højde */
     overflow: auto; /* Sørg for, at footer ikke bliver skjult */
 }
@@ -10,7 +14,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0A0C10;
     padding: 10px 20px;
     color: white;
 }
@@ -61,7 +64,7 @@ body {
 .buttons .signup {
     background-color: #0A0C10;
     color: white;
-    border: none;
+    border-radius: 20px; /* Afrundede hjørner */
     padding: 5px 10px;
     cursor: pointer;
     font-size: 1.2em;
@@ -80,7 +83,7 @@ body {
     gap: 5px;
 }
 
-.burger .line {
+.burger .burgerline {
     width: 30px;
     height: 4px;
     background-color: white;
@@ -101,30 +104,9 @@ body {
 }
 
 
-/* Sørg for, at section fylder hele højden fra headeren og ned */
-.gradient-baggrund {
-    position: relative;
-    width: 100%;
-    height: calc(300vh - 300px); /* Juster højden for at tage højde for headerens højde */
-    overflow: hidden; /* Sørg for, at billedet ikke går ud over section */
-}
-
-/* Gør billedet responsivt og fyldende */
-.gradient-baggrund img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index:-1; /* Sørger for, at billedet er bag indholdet i section */
-}
-
-
-
 
 /* Generel footer-stil */
 .footer {
-    background-color: #0A0C10;
     color: white;
     padding: 40px 20px;
     margin-top: 20px;
