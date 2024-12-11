@@ -9,6 +9,7 @@
     <meta name="author" content="Radar2025 Team">
     <title>Radar2025</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -18,7 +19,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/logo.png" alt="Radar Logo">   
+                    <img src="img/logo.png" alt="Radar Logo">
                 </a>
             </div>
             <ul class="nav-links">
@@ -33,16 +34,58 @@
                 <button class="signup">Opret</button>
             </div>
             <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
             </div>
         </nav>
     </header>
+    
 
     <main>
-       
+        <div class="feedback-container">
+            <div class="left-section">
+              <h1>Giv os Feedback</h1>
+              <p>Hjælp os med at gøre Radar endnu bedre! Din feedback betyder alt for os. <br> Hvad enten det handler om koncerter, stemning, service eller noget helt andet.<br> Del dine tanker og oplevelser, så vi kan skabe endnu flere magiske øjeblikke sammen. <br>Skriv til os eller fang os næste gang, du er forbi. Vi lytter til dig!</p>
+              <button class="feedback-btn">Skriv til os</button>
+            </div>
+            <div class="right-section">
+              <img src="/img/dans.png" alt="Billede" />
+            </div>
+          </div>
+          
+          <!-- Ny fleksboks med grå ramme -->
+    <div class="feedback-box">
+    <h1>Vi sætter pris på din mening</h1>
+    <p class="question">Hvordan vil du vurdere din helhedsoplevelse hos Radar?</p>
+    
+    <!-- Stjerner -->
+    <div class="stars">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+    </div>
+  
+    <p class="feedback-note">Venligst dediker et moment til at fortælle os hvad du synes.</p>
+    
+   <!-- Tekstboks -->
+   <textarea class="feedback-textbox" placeholder="Skriv din feedback her..."></textarea>
+
+   <!-- Del feedback knap -->
+   <button class="submit-btn" onclick="showThankYouMessage()">Del din feedback</button>
+
+   <!-- Takke-besked -->
+   <div class="thank-you-message" id="thankYouMessage">
+       <span class="checkmark">✔</span>
+       <p>Tak fordi du delte din mening med os!</p>
+   </div>
+</div>
+<script src="js/feedback.js"></script>
+
     </main>
+ 
 
     <footer class="footer">
         <div class="footer-container">

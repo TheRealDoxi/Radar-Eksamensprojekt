@@ -239,23 +239,122 @@ p {
 
 /* Responsiv styling */
 @media (max-width: 768px) {
-    .flex-container {
+    /* Generelt for flex-container */
+    .flex-container, .flex-container-artister, .flex-container-playliste {
         flex-direction: column; /* Stabler tekst og billede vertikalt */
+        align-items: center; /* Centrerer alle elementer horisontalt */
         text-align: center; /* Centrerer teksten */
+        padding: 20px; /* Reduceret padding for bedre udnyttelse af plads */
     }
 
-    .text-content {
-        max-width: 100%; /* Teksten fylder hele bredden */
+    .text-content, .text-content-artister, .text-content-playliste {
+        max-width: 100%; /* Gør teksten bredere på små skærme */
+        padding: 0 10px; /* Giver lidt luft på siderne */
     }
 
-    .image-content img {
-        max-width: 80%; /* Reducerer billedets bredde */
-        margin: 20px auto; /* Tilføjer lidt luft omkring billedet */
+    .text-content h1, .text-content-artister h1, .text-content-playliste h1 {
+        font-size: 2.5em; /* Juster størrelse på overskrifter */
+        margin-bottom: 20px; /* Mere plads under overskrifter */
+    }
+
+    .text-content p, .text-content-artister p, .text-content-playliste p {
+        font-size: 1em; /* Lidt mindre tekst */
+        line-height: 1.6;
+        margin-bottom: 20px; /* Plads under afsnit */
+    }
+
+    /* Billeder */
+    .image-content img, .image-content-playliste img {
+        max-width: 80%; /* Reducer billedstørrelsen */
+        height: auto;
+        margin: 20px auto; /* Centrerer billedet og giver luft omkring */
     }
 
     .artists-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stabler kortene vertikalt på små skærme */
+        align-items: center; /* Centrerer kortene */
+        gap: 20px; /* Øget afstand mellem kortene */
+    }
+
+    .artist-card {
+        width: 80%; /* Gør kortene bredere og tilpasser dem til små skærme */
+        margin-bottom: 20px; /* Plads mellem kortene */
+    }
+
+    .artist-image {
+        width: 120px; /* Mindre billedstørrelse i kortet */
+        height: 120px;
+    }
+
+    .read-more-container {
+        margin-top: 20px; /* Plads til knappen */
+    }
+
+    .read-more-button {
+        font-size: 1em; /* Mindre tekststørrelse på knappen */
+        padding: 10px 20px; /* Justeret polstring */
+    }
+
+    .line {
+        width: 60%; /* Linjen fylder kun en del af bredden på små skærme */
+        margin: 0 auto; /* Centrerer linjen */
+    }
+
+    .line::before {
+        left: -5px; /* Juster venstre position for den cirkulære ende */
+    }
+
+    /* Kalender - hvis du har en kalender, skal du også sikre, at den tilpasser sig til små skærme */
+    .calendar-container {
+        width: 100%; /* Kalenderen skal fylde hele bredden */
+        padding: 20px; /* Juster padding */
+        box-shadow: none; /* Fjern skygge for bedre visning på små skærme */
+    }
+
+    .calendar-days, .calendar-grid {
+        grid-template-columns: repeat(7, 1fr); /* Sørg for, at dagene stadig vises korrekt */
+        gap: 10px; /* Mindre afstand mellem dagene */
+        font-size: 1em; /* Justeret skriftstørrelse */
+    }
+
+    .day {
+        height: 40px; /* Juster dagstørrelsen */
+    }
+
+    .slider-card {
+        flex: 0 0 100%; /* Vis kun én slider card ad gangen */
+        margin-bottom: 20px; /* Plads mellem kortene */
+    }
+
+    .slider-heading {
+        font-size: 2em; /* Justeret overskriftstørrelse */
+    }
+
+    .slider-description {
+        font-size: 1em; /* Mindre beskrivelses tekst */
     }
 }
 
+/* For meget små skærme under 480px */
+@media (max-width: 480px) {
+    /* Flere justeringer til de meget små skærme */
+    .text-content h1, .text-content-artister h1, .text-content-playliste h1 {
+        font-size: 2em; /* Mindre overskrifter */
+    }
+
+    .text-content p, .text-content-artister p, .text-content-playliste p {
+        font-size: 0.9em; /* Yderligere reduceret tekststørrelse */
+    }
+
+    .artist-card {
+        width: 100%; /* Kortene fylder hele bredden på meget små skærme */
+    }
+
+    .read-more-button {
+        font-size: 1em; /* Standard knapstørrelse */
+    }
+
+    .slider-card {
+        flex: 0 0 100%; /* Kun én slider card pr. gang */
+    }
+}

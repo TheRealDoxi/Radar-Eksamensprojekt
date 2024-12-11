@@ -31,3 +31,43 @@ selectButton.addEventListener('click', function() {
         alert('Vælg venligst en dato først!');
     }
 });
+
+
+let currentIndex = 0; // Starter ved det første kort
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.slider-card');
+    const totalSlides = slides.length;
+
+    // Bestem hvor mange kort der skal vises baseret på skærmbredden
+    let slidesToShow;
+    if (window.innerWidth <= 480) {
+        slidesToShow = 1; // 1 kort på mobil
+    } else if (window.innerWidth <= 768) {
+        slidesToShow = 2; // 2 kort på tablet
+    } else {
+        slidesToShow = 4; // 4 kort på desktop
+    }
+
+    // Beregn skubbeafstand - kun én kortbredde per klik på små skærme
+    const slideWidth = 100 / slidesToShow; // F.eks. 25% per kort på desktop, 50% på tablet, 100% på mobil
+    const slideShift = slideWidth; // Skubbe 100% af kortets bredde på mobil
+
+    // Opdaterer den aktuelle index baseret på retningen
+    currentIndex += direction;
+
+    // Sørger for at currentIndex ikke går ud af grænserne
+    if (currentIndex < 0) {
+        currentIndex = totalSlides - slidesToShow; // Går til sidste sæt af slides
+    } else if (currentIndex > totalSlides - slidesToShow) {
+        currentIndex = 0; // Går tilbage til første sæt af slides
+    }
+
+    // Bevæger slideren ved at ændre transform egenskaben
+    const slider = document.querySelector('.slider');
+    slider.style.transform = `translateX(-${(currentIndex * slideWidth)}%)`; // Skubber slideren til venstre
+}
+
+// Tilføj event listeners til knapperne
+document.querySelector('.left').addEventListener('click', () => moveSlide(-1)); // Venstre knap
+document.querySelector('.right').addEventListener('click', () => moveSlide(1)); // Højre knap

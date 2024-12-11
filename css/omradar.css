@@ -1,25 +1,29 @@
+/* Flex-container for Områder */
 .flex-container-omradar {
     display: flex; /* Aktiverer flexbox */
     flex-direction: column; /* Stabler elementerne vertikalt */
-    align-items: center; /* Centrerer dem horisontalt */
+    align-items: center; /* Centrerer elementerne horisontalt */
     gap: 30px; /* Afstand mellem elementerne */
     color: #ffffff79;
 }
 
+/* Styling af overskrift */
 .text-content-omradar h1 {
     margin-bottom: 20px; /* Afstand til billedet */
     text-align: center;
     display: flex;
-    font-size: 6vh;
+    font-size: 6vh; /* Dynamisk font-størrelse baseret på viewport højden */
     color: white;
 }
 
+/* Styling af billeder */
 .image-content-omradar img {
-    max-width: 100%;
+    max-width: 100%; /* Billedet fylder ikke mere end 100% af bredden */
     height: auto; /* Bevarer billedets proportioner */
     border-radius: 10px; /* Bløde kanter */
 }
 
+/* Styling af tekstindhold */
 .text-content-omradar p {
     display: flex; /* Brug flexbox for centreret layout */
     justify-content: center; /* Horisontal centrering */
@@ -30,13 +34,11 @@
     padding: 20px 0; /* Giv lidt luft omkring teksten */
 }
 
-
-
 /* Styling af knappen */
 .read-more-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Afstand til kortene */
+    margin-top: 30px; /* Afstand til knappen */
 }
 
 .read-more-button {
@@ -54,7 +56,7 @@
     background-color: #8c0f36; /* Ændrer farven når man hover */
 }
 
-
+/* Styling af billedramme */
 .image-frame {
     max-width: 900px; /* Begræns den maksimale bredde */
     max-height: 900px;
@@ -66,8 +68,7 @@
     width: 50vw; /* Billedet bliver halvdelen af vinduets bredde */
 }
 
-
-
+/* Styling af tekstsektionen */
 .text-section-omradar {
     font-family: 'inter', sans-serif; /* Moderne font */
     color: #ffffff; /* Mørk grå for bedre læsbarhed */
@@ -88,14 +89,43 @@
     margin-bottom: 0; /* Fjerner ekstra plads efter sidste afsnit */
 }
 
-
+/* Responsiv styling */
 @media (max-width: 768px) {
+    /* Flex-container */
     .flex-container-omradar {
         flex-direction: column; /* Stabler elementerne vertikalt */
         gap: 20px; /* Reducer afstand for små skærme */
     }
 
+    /* Justering af overskrift */
+    .text-content-omradar h1 {
+        font-size: 8vh; /* Øget font-størrelse på små skærme */
+        margin-bottom: 20px;
+    }
+
+    /* Justering af tekstindhold */
     .text-content-omradar {
+        max-width: 90%; /* Gør teksten lidt bredere på små skærme */
         text-align: center; /* Centrer teksten kun på små skærme */
+    }
+
+    /* Billeder: Størrelsen ændres kun på skærme under 768px */
+    .image-frame {
+        width: 90vw; /* Billedet fylder nu 90% af viewport bredden */
+    }
+
+    .image-content-omradar img {
+        max-width: 90%; /* Billedet bliver 90% af bredden på små skærme */
+    }
+
+    /* Justering af knap */
+    .read-more-button {
+        font-size: 1.1em; /* Justeret størrelse på knappen */
+        padding: 12px 25px; /* Mindre polstring */
+    }
+
+    /* Justering af tekstsektion */
+    .text-section-omradar {
+        width: 90%; /* Giver mere plads til teksten på små skærme */
     }
 }
