@@ -45,6 +45,7 @@ body {
 
 .nav-links li {
     display: inline;
+    position: relative;  /* For at placere dropdown-menuen relativt */
 }
 
 .nav-links a {
@@ -55,29 +56,96 @@ body {
     transition: background-color 0.9s ease; /* Glidende hover-effekt */
 }
 
-.buttons {
+/* Pil til dropdown */
+.dropdown-arrow {
+    font-size: 1.0em;
+    color: white;
+    margin-left: -10px;
+    display: inline-block;
+    transition: transform 0.3s; /* Glidende effekt på pilen */
+}
+
+/* Skjuler dropdown-menuen som standard */
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    display: none; /* Skjult som standard */
+    width: 200px; /* Du kan justere bredden */
+    border-radius: 10px;
+    z-index: 10000; /* Sørg for at dropdown-menuen er foran alt andet indhold */
+}
+
+.nav-item.active .dropdown-menu {
+    display: block; /* Vis dropdown-menu, når active er tilføjet */
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #A41045;
+}
+
+/* Vis dropdown-menu, når der klikkes på pilen */
+.nav-item.active .dropdown-menu {
+    display: block;
+}
+
+/* Roter pilen, når dropdown er aktiv */
+.nav-item.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-buttons {
     display: flex;
     gap: 10px;
 }
 
-.buttons .login,
-.buttons .signup {
-    padding: 5px 10px;
+.nav-buttons .login,
+.nav-buttons .signup {
+    padding: 10px 20px;  /* Juster størrelsen på knapperne */
     cursor: pointer;
     font-size: 1.2em;
+    border-radius: 20px; /* Afrundede hjørner */
+    border: none; /* Fjern kantlinje (hvis nogen) */
+    transition: background-color 0.3s, color 0.3s; /* Glidende effekt på farver */
 }
 
-.buttons .signup {
-    background-color: #A41045;
-    border-radius: 20px; /* Afrundede hjørner */
-    padding: 13px 15px;
+/* Individuelle farver for login-knappen */
+.nav-buttons .login {
+    background-color: #0A0C10; /* Baggrundsfarve for login-knappen */
+    color: white; /* Tekstfarve for login-knappen */
 }
 
-.buttons .login {
-    background-color: #0A0C10;
-    color: white;
-    border-radius: 20px; /* Afrundede hjørner */
-    padding: 13px 15px;
+/* Individuelle farver for signup-knappen */
+.nav-buttons .signup {
+    background-color: #A41045; /* Baggrundsfarve for signup-knappen */
+    color: white; /* Tekstfarve for signup-knappen */
+}
+
+/* Valgfrit: Ændre farverne, når knappen er hoveret */
+.nav-buttons .login:hover,
+.nav-buttons .signup:hover {
+    background-color: #A41045;  /* Ændrer baggrundsfarve ved hover for login */
+    color: white; /* Ændrer tekstfarve ved hover */
+}
+
+.nav-buttons .signup:hover {
+    background-color: #0A0C10;  /* Ændrer baggrundsfarve ved hover for signup */
+    color: white; /* Ændrer tekstfarve ved hover */
 }
 
 .burger {
@@ -204,7 +272,6 @@ body {
         width: 80%;
         padding: 10px; 
     }
-
     .nav-links.active {
         display: flex;
     }

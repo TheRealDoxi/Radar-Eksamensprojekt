@@ -333,6 +333,11 @@ p {
     .slider-description {
         font-size: 1em; /* Mindre beskrivelses tekst */
     }
+
+    .line {
+        display: none; /* Skjuler linjen på små skærme */
+    }
+
 }
 
 /* For meget små skærme under 480px */
@@ -357,4 +362,9 @@ p {
     .slider-card {
         flex: 0 0 100%; /* Kun én slider card pr. gang */
     }
+
+    .line {
+        display: none; /* Skjuler linjen på små skærme */
+    }
+    
 }

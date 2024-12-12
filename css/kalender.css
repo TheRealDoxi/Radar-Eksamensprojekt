@@ -5,6 +5,7 @@
     align-items: center; /* Centrerer indholdet horisontalt */
     padding: 20px; /* Padding for at skabe lidt luft rundt om indholdet */
     width: 100%; /* Gør containeren så bred som muligt */
+    z-index: -1; /* Sørger for, at videoen ligger bag andre elementer */
 }
 
 /* Flex-container for tekst og kalender */
@@ -16,6 +17,7 @@
     max-width: 90%; /* Maksimal bredde */
     margin-top: 20px; /* Afstand mellem overskrift og kalender */
     flex-wrap: wrap; /* Gør det muligt at bryde linjen på små skærme */
+    z-index: -1; /* Sørger for, at videoen ligger bag andre elementer */
 }
 
 /* Kalender-sektion */
@@ -32,7 +34,6 @@
     padding: 30px;
     border-radius: 35px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 /* Kalender månedsnavn */
@@ -278,7 +279,6 @@
     margin-bottom: 20px; /* Lidt afstand til slideren */
 }
 
-
 /* Denne del fjerner cirklen og linjen på skærme under 768px */
 @media (max-width: 768px) {
     .text-content p::before,
@@ -320,6 +320,12 @@
     .calendar-grid {
         gap: 15px; /* Mindre afstand mellem dagene */
     }
+
+    .text-content p::before,
+    .text-content p::after {
+        content: none; /* Fjerner både cirklen og linjen */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -372,4 +378,15 @@
     .slider-heading {
         font-size: 2em;
     }
+
+    .main-container {
+        display: flex;
+        flex-direction: column; /* Behold vertikalt layout */
+        align-items: center; /* Centrerer indholdet horisontalt */
+        justify-content: center; /* Centrerer indholdet vertikalt */
+        padding: 10px; /* Mindre padding på små skærme */
+        margin: 0 auto; /* Sørger for, at containeren centrerer på skærmen */
+        z-index: 0; /* Sørger for, at den ikke overlapper forkert */
+    }
+    
 }
