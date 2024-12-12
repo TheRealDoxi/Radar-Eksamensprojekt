@@ -281,21 +281,27 @@
     text-decoration: underline; /* Understreg ved hover */
 }
 
-
 /* Responsivitet */
 @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
+        align-items: center; /* Sørger for, at alle børn bliver centreret */
         gap: 20px;
     }
 
-    .rules-box {
-        flex: unset; 
-        padding: 15px;
-    }
 
+    .rules-box {
+        flex: unset; /* Fjern fleksibilitet */
+        padding: 15px;
+        margin: 0 auto; /* Centrerer elementet horisontalt */
+        width: 85%; /* Giver boksen en bredde, der passer på små skærme */
+        max-width: 400px; /* Sikrer, at den ikke bliver for bred */
+        font-size: 80%;
+    }
     .user-experiences {
         flex: unset; 
+        width: 90%; /* Sikrer, at den også passer på små skærme */
+        max-width: 700px;
     }
 
     .user-box {

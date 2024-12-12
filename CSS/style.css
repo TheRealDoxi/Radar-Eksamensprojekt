@@ -1,3 +1,4 @@
+/* Body Styling */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif; /* Hvis du bruger Inter font */
@@ -10,12 +11,15 @@ body {
     overflow: auto; /* Sørg for, at footer ikke bliver skjult */
 }
 
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    color: white;
+    background-color: rgba(114, 89, 89, 0.2); /* Samme baggrundsfarve for hele sektionen */
+    border-radius: 30px; /* Afrundede hjørner */
+    border: 0.01px solid rgba(255, 255, 255, 0.2); /* Hvid ramme */
     position: relative;
 }
 
@@ -32,20 +36,21 @@ body {
     padding: 0;
 }
 
+/* Navbar Links Styling */
 .nav-links {
     list-style: none;
     display: flex; /* Holder punkterne på en linje */
-    gap: 50px; /* Mere plads mellem menupunkterne */
+    gap: 70px; /* Mere plads mellem menupunkterne */
     margin: 0;
     padding: 25px 70px; /* Indre afstand i boksen */
     background-color: rgba(114, 89, 89, 0.2); /* Grå baggrund med 20% opacitet */
-    border-radius: 20px; /* Afrundede hjørner */
+    border-radius: 30px; /* Afrundede hjørner */
     border: 0.01px solid rgba(255, 255, 255, 0.205); /* Hvid ramme med standard tykkelse (kan ændres) */
 }
 
 .nav-links li {
     display: inline;
-    position: relative;  /* For at placere dropdown-menuen relativt */
+    position: relative; /* For at placere dropdown-menuen relativt */
 }
 
 .nav-links a {
@@ -56,7 +61,7 @@ body {
     transition: background-color 0.9s ease; /* Glidende hover-effekt */
 }
 
-/* Pil til dropdown */
+/* Dropdown Styling */
 .dropdown-arrow {
     font-size: 1.0em;
     color: white;
@@ -65,7 +70,6 @@ body {
     transition: transform 0.3s; /* Glidende effekt på pilen */
 }
 
-/* Skjuler dropdown-menuen som standard */
 .dropdown-menu {
     list-style: none;
     padding: 0;
@@ -99,16 +103,16 @@ body {
     background-color: #A41045;
 }
 
-/* Vis dropdown-menu, når der klikkes på pilen */
+/* Dropdown Hover & Arrow Rotation */
 .nav-item.active .dropdown-menu {
     display: block;
 }
 
-/* Roter pilen, når dropdown er aktiv */
 .nav-item.active .dropdown-arrow {
     transform: rotate(180deg);
 }
 
+/* Navbar Buttons Styling */
 .nav-buttons {
     display: flex;
     gap: 10px;
@@ -116,38 +120,35 @@ body {
 
 .nav-buttons .login,
 .nav-buttons .signup {
-    padding: 10px 20px;  /* Juster størrelsen på knapperne */
+    padding: 10px 20px; /* Juster størrelsen på knapperne */
     cursor: pointer;
     font-size: 1.2em;
     border-radius: 20px; /* Afrundede hjørner */
-    border: none; /* Fjern kantlinje (hvis nogen) */
-    transition: background-color 0.3s, color 0.3s; /* Glidende effekt på farver */
+    border: none; /* Fjern kantlinje */
+    transition: background-color 0.3s, color 0.3s; /* Glidende effekt */
 }
 
-/* Individuelle farver for login-knappen */
 .nav-buttons .login {
-    background-color: #0A0C10; /* Baggrundsfarve for login-knappen */
-    color: white; /* Tekstfarve for login-knappen */
+    background-color: #0A0C10;
+    color: white;
 }
 
-/* Individuelle farver for signup-knappen */
 .nav-buttons .signup {
-    background-color: #A41045; /* Baggrundsfarve for signup-knappen */
-    color: white; /* Tekstfarve for signup-knappen */
+    background-color: #A41045;
+    color: white;
 }
 
-/* Valgfrit: Ændre farverne, når knappen er hoveret */
-.nav-buttons .login:hover,
-.nav-buttons .signup:hover {
-    background-color: #A41045;  /* Ændrer baggrundsfarve ved hover for login */
-    color: white; /* Ændrer tekstfarve ved hover */
+.nav-buttons .login:hover {
+    background-color: #A41045;
+    color: white;
 }
 
 .nav-buttons .signup:hover {
-    background-color: #0A0C10;  /* Ændrer baggrundsfarve ved hover for signup */
-    color: white; /* Ændrer tekstfarve ved hover */
+    background-color: #0A0C10;
+    color: white;
 }
 
+/* Burger Menu Styling */
 .burger {
     display: none;
     flex-direction: column;
@@ -159,47 +160,46 @@ body {
     width: 30px;
     height: 4px;
     background-color: white;
-    transition: all 0.3s ease-in-out; /* Tilføj en smooth transition for animationen */
+    transition: all 0.3s ease-in-out; /* Tilføj en smooth transition */
 }
 
-/* Når burger-menuen er toggled (åben) */
 .burger.toggle .burgerline:nth-child(1) {
-    transform: translateY(10px) rotate(45deg); /* Første linje roteres og flyttes */
+    transform: translateY(10px) rotate(45deg);
 }
 
 .burger.toggle .burgerline:nth-child(2) {
-    opacity: 0; /* Anden linje bliver usynlig */
+    opacity: 0; /* Skjuler midterlinjen */
 }
 
 .burger.toggle .burgerline:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg); /* Tredje linje roteres og flyttes */
+    transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Generel footer-stil */
+/* Footer Styling */
 .footer {
     color: white;
     padding: 40px 20px;
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Centrerer alt indhold horisontalt */
-    align-items: center; /* Centrerer indholdet vertikalt */
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centrerer logo og kolonner vertikalt */
-    max-width: 1200px; /* Maksimal bredde på footer */
-    width: 100%; /* Gør, at footer fylder 100% af bredden */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .footer-logo {
-    flex-shrink: 0; /* Forhindrer, at logoet ændrer størrelse */
-    margin-right: 40px; /* Afstand mellem logo og kolonner */
+    flex-shrink: 0;
+    margin-right: 40px;
 }
 
 .footer-logo img {
-    height: 150px; /* Juster højden på logoet */
+    height: 150px;
     width: auto;
 }
 
@@ -237,7 +237,7 @@ body {
 }
 
 .footer-column a:hover {
-    color: #A41045;  /* Ændrer farve på hover */
+    color: #A41045;
 }
 
 .social-media-icons {
@@ -247,20 +247,17 @@ body {
     margin-top: 20px;
 }
 
-/* Ikonerne skal være hvide */
 .social-media-icons a i {
-    font-size: 2em; /* Størrelse på ikonerne */
+    font-size: 2em;
     color: white;
-    transition: color 0.3s ease; /* Glidende effekt på hover */
+    transition: color 0.3s ease;
 }
 
-/* Ikonerne ændrer farve ved hover */
 .social-media-icons a:hover i {
-    color: #A41045; /* Ændrer farve ved hover */
+    color: #A41045;
 }
 
-
-/* Responsiv styling */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -270,14 +267,11 @@ body {
         left: 20px;
         background-color: #0A0C10;
         width: 80%;
-        padding: 10px; 
-    }
-    .nav-links.active {
-        display: flex;
+        padding: 10px;
     }
 
-    .buttons {
-        display: none;
+    .nav-links.active {
+        display: flex;
     }
 
     .burger {
@@ -290,7 +284,7 @@ body {
     }
 
     .footer-logo {
-        margin-bottom: 20px; /* Afstand under logoet på små skærme */
+        display: none;
     }
 
     .footer-columns {
@@ -299,22 +293,6 @@ body {
     }
 
     .footer-column {
-        padding: 20px 0;
         text-align: center;
-    }
-
-    .social-media-icons {
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .footer-column ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column li {
-        margin-bottom: 5px;
     }
 }
