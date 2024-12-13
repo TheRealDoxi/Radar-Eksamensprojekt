@@ -25,48 +25,37 @@
             <ul class="nav-links">
                 <li class="nav-item">
                     <a href="kalender.html" class="nav-link">Kalender</a>
-                    <span class="dropdown-arrow"><i class="fa fa-chevron-down"></i></span>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Underpunkt 1</a></li>
-                        <li><a href="#">Underpunkt 2</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="frivillig.html" class="nav-link">Frivillig</a>
-                    <span class="dropdown-arrow"><i class="fa fa-chevron-down"></i></span>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Underpunkt 1</a></li>
-                        <li><a href="#">Underpunkt 2</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="forum.html" class="nav-link">Forum</a>
-                    <span class="dropdown-arrow"><i class="fa fa-chevron-down"></i></span>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Underpunkt 1</a></li>
-                        <li><a href="#">Underpunkt 2</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="feedback.html" class="nav-link">Feedback</a>
-                    <span class="dropdown-arrow"><i class="fa fa-chevron-down"></i></span>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Underpunkt 1</a></li>
-                        <li><a href="#">Underpunkt 2</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="omradar.html" class="nav-link">Om Radar</a>
-                    <span class="dropdown-arrow"><i class="fa fa-chevron-down"></i></span>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Underpunkt 1</a></li>
-                        <li><a href="#">Underpunkt 2</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="nav-buttons">
                 <button class="login">Log ind</button>
                 <button class="signup">Opret</button>
+            </div>
+            <div class="nav-mini-icons">
+                <i class="fas fa-sign-in-alt login-icon" title="Login"></i>
+                <i class="fas fa-user-plus signup-icon" title="Opret bruger"></i>
             </div>
             <div class="burger">
                 <div class="burgerline"></div>
@@ -76,80 +65,26 @@
         </nav>
     </header>
     
-
     <main>
-        <!-- Hovedcontainer for alt indhold -->
-    <div class="main-container">
-        
-        <!-- Tekst-sektionen -->
+    
         <div class="flex-container">
-            <div class="text-content">
-                <h1>Se hvilken kunstner der spiller hvornår!?</h1>
-                <p>Hos Radar er der mange forskellige nye ansigter at se, og derfor kan det være rart at se, hvem der spiller på netop den dato, du ønsker at besøge.</p>
-            </div>
-            
-            <!-- Kalender-sektionen -->
-            <div class="calendar-section">
-                <div class="calendar-container">
-                    <h1 class="calendar-month">December</h1>
+            <h1 class="main-title">Se hvem der spiller hvornår</h1>
+            <div class="slider-calender-container">
+                <div class="calendar-wrapper">
+                    <h2 class="calendar-title">December 2024</h2>
                     <div class="calendar-days">
-                        <div>Man</div>
-                        <div>Tir</div>
-                        <div>Ons</div>
-                        <div>Tor</div>
-                        <div>Fre</div>
-                        <div>Lør</div>
-                        <div>Søn</div>
+                        <!-- Dynamisk genererede dage indsættes her via JavaScript -->
                     </div>
-                    <div class="calendar-grid">
-                        <!-- Kalenderdage -->
-                        <div class="day">1</div>
-                        <div class="day">2</div>
-                        <div class="day">3</div>
-                        <div class="day">4</div>
-                        <div class="day">5</div>
-                        <div class="day">6</div>
-                        <div class="day">7</div>
-                        <div class="day">8</div>
-                        <div class="day">9</div>
-                        <div class="day">10</div>
-                        <div class="day">11</div>
-                        <div class="day">12</div>
-                        <div class="day">13</div>
-                        <div class="day">14</div>
-                        <div class="day">15</div>
-                        <div class="day">16</div>
-                        <div class="day">17</div>
-                        <div class="day">18</div>
-                        <div class="day">19</div>
-                        <div class="day">20</div>
-                        <div class="day">21</div>
-                        <div class="day">22</div>
-                        <div class="day">23</div>
-                        <div class="day">24</div>
-                        <div class="day">25</div>
-                        <div class="day">26</div>
-                        <div class="day">27</div>
-                        <div class="day">28</div>
-                        <div class="day">29</div>
-                        <div class="day">30</div>
-                        <div class="day">31</div>
-                        <!-- Ekstra dage -->
-                        <div class="day extra">1</div>
-                        <div class="day extra">2</div>
-                        <div class="day extra">3</div>
-                        <div class="day extra">4</div>
-                    </div>
-                </div>
-
-                <!-- Knap under kalenderen -->
-                <div class="button-container">
-                    <button class="select-button">Vælg</button>
+                    <button id="select-button" class="select-button" disabled>Vælg</button>
                 </div>
             </div>
         </div>
-    </div>
+        
+        
 
+    <div class="main-container">
+
+        
     <div class="slider-section">
         <!-- Overskriften er nu placeret før slideren -->
         <h1 class="slider-heading">Se hvad du gik glip af <br> sidste år!</h1>

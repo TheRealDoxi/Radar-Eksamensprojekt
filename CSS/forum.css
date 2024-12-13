@@ -1,0 +1,322 @@
+.main-heading {
+    color: white;
+    padding: 10px;
+    font-size: 4.5em; /* Tilføjer stor tekst til h1 */
+    text-align: center;
+}
+
+.intro-text {
+    display: block; /* Fjern flex for at undgå uønsket linjeadfærd */
+    color: gray;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+    max-width: 900px; /* Begræns bredden på teksten */
+    text-align: center; /* Centrér teksten */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Forum Section */
+.forum-section {
+    margin-top: 40px;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 200px;
+    background-image: url('/img/Radar.jpg'); /* Udskift 'banner.jpg' med dit valgte billede */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+/* Logo Circle */
+.logo-circle {
+    position: absolute;
+    bottom: -30px;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circle img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+/* Forum Header */
+.forum-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 920px;
+    margin: 10px auto 0;
+    padding: 0 10px;
+}
+
+.forum-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.red-button {
+    background-color: #A41045;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.red-button:hover {
+    background-color:#A41045;
+}
+
+/* Lineær linje */
+.divider-banner {
+    width: 100%; /* Dækker hele bredden af containeren */
+    max-width: 1100px; /* Samme som bannerets max-width */
+    height: 8px; /* Tykkelsen af linjen */
+    background-color: gray; /* Grå farve */
+    margin: 10px auto; /* Centrer linjen horisontalt */
+    border-radius: 5px; /* Afrundede ender */
+}
+
+
+
+/* Content Section */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1100px; /* Matcher bannerets bredde */
+    margin: 20px auto; /* Centrer sektionen */
+    gap: 20px; /* Mellemrum mellem kolonnerne */
+}
+
+/* Brugeroplevelser (venstre kolonne) */
+.user-experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Mellemrum mellem boksene */
+    flex: 2; /* Tager 2/3 af bredden */
+}
+
+/* En individuel brugeroplevelsesboks */
+.user-box {
+    background-color: rgba(73, 73, 73, 0.432); /* Grå baggrund med lav opacity */
+    border-radius: 10px; /* Afrundede hjørner */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    width: 50px; /* Størrelsen på billedet */
+    height: 50px;
+    background-color: #f0f0f0; /* Lys baggrund hvis billede ikke findes */
+    border-radius: 50%; /* Gør billedet rundt */
+    overflow: hidden; /* Sørg for, at billedet ikke stikker udenfor cirklen */
+    margin-right: 15px; /* Mellemrum mellem billede og tekst */
+}
+
+.user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for, at billedet fylder hele cirklen */
+}
+
+
+
+.reviews-count {
+    font-size: 14px;
+    color: #777;
+}
+
+.divider {
+    width: 100%;
+    height: 4px;
+    background-color: gray;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.star {
+    background-color: #A41045;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+}
+
+.experience-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-box h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experience-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Regler-boksen (højre kolonne) */
+.rules-box {
+    background-color: rgba(73, 73, 73, 0.85); /* Øget opacity for bedre læsbarhed */
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1; /* Tager 1/3 af bredden */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rules-box h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.rules-box ul {
+    padding-left: 20px; /* Tilføj lidt venstre margin for at placere punkterne ordentligt */
+}
+
+.rules-box li {
+    font-size: 1.0em;
+    margin-bottom: 15px;
+    color: #ffffff; 
+}
+
+/* Divideren efter punkterne */
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: gray; /* Grå farve */
+    margin: 20px 0; /* Afstand før og efter divideren */
+    border-radius: 5px; /* Afrundede hjørner */
+}
+
+/* Kontakt Moderaterne */
+.rules-box h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px; /* Afstand før overskriften */
+    font-weight: bold;
+}
+
+.contact-list {
+    list-style-type: none; /* Fjern bullet points */
+    padding-left: 0; /* Fjern venstre padding */
+    margin-top: 10px; /* Afstand før listen */
+}
+
+.contact-list li {
+    margin-bottom: 15px; /* Afstand mellem kontaktpersoner */
+    font-size: 0.8em;
+    color: white;
+}
+
+.contact-list li strong {
+    display: block; /* Sørger for, at navnet står på en ny linje */
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.contact-list li p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.contact-list a {
+    color: #A41045; /* Farve på mail-links */
+    text-decoration: none; /* Fjern understregning */
+}
+
+.contact-list a:hover {
+    text-decoration: underline; /* Understreg ved hover */
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        align-items: center; /* Sørger for, at alle børn bliver centreret */
+        gap: 20px;
+    }
+
+
+    .rules-box {
+        flex: unset; /* Fjern fleksibilitet */
+        padding: 15px;
+        margin: 0 auto; /* Centrerer elementet horisontalt */
+        width: 85%; /* Giver boksen en bredde, der passer på små skærme */
+        max-width: 400px; /* Sikrer, at den ikke bliver for bred */
+        font-size: 80%;
+    }
+    .user-experiences {
+        flex: unset; 
+        width: 90%; /* Sikrer, at den også passer på små skærme */
+        max-width: 700px;
+    }
+
+    .user-box {
+        padding: 10px;
+    }
+
+    .user-name {
+        font-size: 16px;
+    }
+
+    .rules-box h2 {
+        font-size: 1.5em;
+    }
+
+    .rules-box li {
+        font-size: 1.2em;
+    }
+}

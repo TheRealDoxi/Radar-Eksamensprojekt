@@ -16,16 +16,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 95%;
     padding: 10px 20px;
     background-color: rgba(114, 89, 89, 0.2); /* Samme baggrundsfarve for hele sektionen */
-    border-radius: 30px; /* Afrundede hjørner */
+    border-radius: 35px; /* Afrundede hjørner */
     border: 0.01px solid rgba(255, 255, 255, 0.2); /* Hvid ramme */
     position: relative;
+    margin:20px 20px 0 20px; /* Top: 20px, Højre: 20px, Bund: 0px, Venstre: 20px */
 }
 
 .navbar .logo {
     font-size: 1.5em;
     font-weight: bold;
+}
+
+.nav-icons {
+    display: none; /* Standard: Skjul ikonerne */
 }
 
 .logo img {
@@ -61,29 +67,6 @@ body {
     transition: background-color 0.9s ease; /* Glidende hover-effekt */
 }
 
-/* Dropdown Styling */
-.dropdown-arrow {
-    font-size: 1.0em;
-    color: white;
-    margin-left: -10px;
-    display: inline-block;
-    transition: transform 0.3s; /* Glidende effekt på pilen */
-}
-
-.dropdown-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    display: none; /* Skjult som standard */
-    width: 200px; /* Du kan justere bredden */
-    border-radius: 10px;
-    z-index: 10000; /* Sørg for at dropdown-menuen er foran alt andet indhold */
-}
-
 .nav-item.active .dropdown-menu {
     display: block; /* Vis dropdown-menu, når active er tilføjet */
 }
@@ -99,23 +82,14 @@ body {
     display: block;
 }
 
-.dropdown-menu li a:hover {
-    background-color: #A41045;
-}
-
-/* Dropdown Hover & Arrow Rotation */
-.nav-item.active .dropdown-menu {
-    display: block;
-}
-
-.nav-item.active .dropdown-arrow {
-    transform: rotate(180deg);
-}
-
 /* Navbar Buttons Styling */
 .nav-buttons {
     display: flex;
     gap: 10px;
+}
+
+.nav-mini-icons {
+    display: none; /* Standard: Skjul ikonerne */
 }
 
 .nav-buttons .login,
@@ -260,22 +234,26 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
+        display: none; /* Skjul menuen som standard */
+        flex-direction: column; /* Lodret menu */
         position: absolute;
-        top: 90px;
-        left: 20px;
-        background-color: #0A0C10;
-        width: 80%;
-        padding: 10px;
+        top: 50px; /* Justér position under navbar */
+        right: 10px; /* Sørg for, at menuen er helt til højre */
+        background-color: #0A0C10; /* Baggrundsfarve */
+        width: auto; /* Tilpas bredden til indholdet */
+        padding: 10px 20px; /* Indre afstand */
+        border-radius: 10px; /* Afrundede hjørner */
+        gap: 10px; /* Mindre mellemrum mellem menupunkter */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Vis dropdown-menuen, når den er aktiv */
     }
 
     .burger {
-        display: flex;
+        display: flex; /* Sørger for, at burger-menuen vises */
+        position: absolute;
+        right: 10px; /* Ryk burger-menuen til højre */
     }
 
     .footer-container {
@@ -295,4 +273,63 @@ body {
     .footer-column {
         text-align: center;
     }
+
+    .nav-buttons {
+        display: none; /* Skjul knapperne */
+    }
+
+   .navbar {
+        height: 50px; /* Reducer højden */
+        padding: 5px 10px; /* Juster padding */
+        margin: 0; /* Fjern marginer på siderne */
+        display: flex; /* Sørg for, at navbar fungerer som en flekscontainer */
+        justify-content: space-between; /* Centrerer navbar-indholdet horisontalt */
+        align-items: center; /* Centrerer navbar-indholdet vertikalt */
+    }
+
+    .navbar .logo img {
+        height: 60px; /* Reducer højden på logoet for at passe til mindre navbar */
+        border-radius: 30px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column; /* Sørger for, at dropdown-menuen er lodret */
+        position: absolute;
+        top: 50px; /* Justerer dropdown-menuens placering under navbar */
+        right: 10px; /* Rykker dropdown-menuen helt ud til højre */
+        background-color: #0A0C10; /* Baggrundsfarve for dropdown */
+        width: auto; /* Lad dropdown-menuen passe til indholdet */
+        padding: 10px 20px; /* Tilpas afstand inde i dropdown */
+        border-radius: 10px; /* Afrundede hjørner */
+        gap: 10px; /* Reducer mellemrum mellem hovedmenupunkterne */
+    }
+
+    .nav-links li {
+        margin: 0; /* Fjern ekstra margin omkring punkterne */
+    }
+
+
+    .nav-links a {
+        padding: 10px 15px; /* Reducer indre padding for at spare plads */
+        font-size: 1em; /* Mindre tekst for mobil */
+    }
+
+    .nav-mini-icons {
+        display: flex !important; /* Vis ikonerne kun på små skærme */
+        gap: 10px;
+        position: absolute; /* Gør det muligt at placere ikonerne relativt til navbar */
+        right: 55px; /* Placer ikonerne til venstre for burger-menuen med lidt afstand */
+        top: 50%; /* Juster vertikalt for at centrere dem */
+        transform: translateY(-50%); /* Centrer ikonerne vertikalt i navbar */
+    }
+    
+    .nav-mini-icons i {
+        font-size: 1.5em; /* Størrelse på ikonerne */
+        color: white; /* Farve på ikonerne */
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    
 }
