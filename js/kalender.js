@@ -1,6 +1,3 @@
-
-
-
 // Hent elementer fra DOM
 const slider = document.querySelector('.slider');
 const leftButton = document.querySelector('.left');
