@@ -338,6 +338,13 @@ p {
         display: none; /* Skjuler linjen på små skærme */
     }
 
+    .image-content-playliste img {
+        width: 70%; /* Gør billedet mindre på telefonskærme */
+        max-width: 300px; /* Sætter en maksimal bredde */
+        margin: 0 auto; /* Centrerer billedet horisontalt */
+        display: block; /* Sikrer at billedet er en blok for korrekt centering */
+    }    
+
 }
 
 /* For meget små skærme under 480px */

@@ -15,7 +15,7 @@
   
   p {
     font-size: 16px;
-    color: #555;
+    color: #ffffff;
     line-height: 1.6;
     margin-top: 6px;
     margin-bottom: 20px; /* Tilføjet margin-bottom for bedre afstand mellem tekst og knap */
@@ -53,6 +53,27 @@
     color: #ffffff;
     text-align: center;
   }
+
+  
+  .feedback-content-1 {
+    margin-left: 260px; /* Margin til venstre */
+    margin-right: 200px; /* Margin til højre */
+    padding: 20px; /* Eventuel padding, hvis du vil have luft inde i boksen */
+}
+
+.feedback-textbox {
+  width: 100%; /* Sørg for at tekstboksen ikke fylder hele bredden */
+  max-width: 10000px; /* Begræns bredden på tekstboksen */
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  resize: none;
+  box-sizing: border-box; /* Sørger for at padding ikke påvirker den totale bredde */
+}
   
   .question {
     font-size: 18px;
@@ -142,6 +163,14 @@
       font-size: 14px; /* Mindre font-størrelse på knappen */
       padding: 10px 20px; /* Justeret padding på knappen for mobil */
     }
+
+    .feedback-content-1 {
+      margin-left: 0px; /* Mindre margin på meget små skærme */
+      margin-right: 0px; /* Mindre margin på meget små skærme */
+  }
+
+
+
   }
   
 
@@ -149,9 +178,9 @@
     display: none; /* Skjul beskeden som standard */
     text-align: center;
     margin-top: 20px;
-    background-color: #f0f8f0; /* Lys grøn baggrund */
-    color: #4caf50; /* Grøn tekst */
-    border: 1px solid #4caf50;
+    background-color: #000000; /* Lys grøn baggrund */
+    color: #A41045; /* Grøn tekst */
+    border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 15px;
     font-size: 16px;
