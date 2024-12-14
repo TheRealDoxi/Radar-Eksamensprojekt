@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column; /* For vertikalt layout */
     align-items: center; /* Centrerer indholdet horisontalt */
-    padding: 20px; /* Padding for at skabe lidt luft rundt om indholdet */
     width: 100%; /* Gør containeren så bred som muligt */
     z-index: 0; /* Sørger for, at videoen ligger bag andre elementer */
 }
@@ -15,15 +14,10 @@
     position: relative;
 }
 
-.main-title{
-    z-index: 0; /* Sørger for, at videoen ligger bag andre elementer */
-}
-
 .text-content h1 {
     font-size: 4.5em;
     line-height: 1.2;
     margin-bottom: 0;
-    padding-left: 100px;
     color: white;
     margin-top: 200px;
 }
@@ -32,7 +26,6 @@
     font-size: 1.2em;
     line-height: 1.6;
     padding: 10px 0;
-    padding-left: 100px;
     max-width: 70%;
     position: relative;
     color: grey;
@@ -69,7 +62,7 @@
     padding: 30px; /* Øg padding for at gøre kalenderen større */
     text-align: center;
     width: 100%;
-    max-width: 1000px; /* Øget maksimal bredde på kalenderen */
+    max-width: 800px; /* Øget maksimal bredde på kalenderen */
     margin: 0 auto; /* Centrerer kalenderen horisontalt */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tilføjer skygge */
 }
@@ -172,7 +165,6 @@
     margin-top: 60px;
     overflow: hidden; /* Skjuler de elementer, der går udenfor containeren */
     width: 100%; /* Fylder hele skærmbredden */
-    padding: 0 10px; /* Tilføjer lidt padding til kanterne */
     max-width: 100%; /* Maksimal bredde af containeren */
     background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.1)); /* Blød overgang */
 }
@@ -356,7 +348,6 @@
     }
 
     .calendar-container {
-        padding: 10px;
         box-shadow: none;
         z-index: 0; /* Sørger for, at den ikke overlapper forkert */
 
@@ -384,7 +375,7 @@
 
     /* Juster padding på slider-container for små skærme */
     .slider-container {
-        padding: 0 5px;
+        padding: 0px;
     }
 
     /* Juster knapstørrelse for små skærme */
@@ -402,7 +393,6 @@
         flex-direction: column; /* Behold vertikalt layout */
         align-items: center; /* Centrerer indholdet horisontalt */
         justify-content: center; /* Centrerer indholdet vertikalt */
-        padding: 10px; /* Mindre padding på små skærme */
         margin: 0 auto; /* Sørger for, at containeren centrerer på skærmen */
         z-index: 0; /* Sørger for, at den ikke overlapper forkert */
     }
