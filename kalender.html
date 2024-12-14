@@ -1,192 +1,222 @@
 <!DOCTYPE html>
 <html lang="da">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Radar2025 - Platform for frivillige, kalender og feedback">
-    <meta name="keywords" content="Radar2025, frivillig, forum, kalender, feedback, om Radar">
-    <meta name="author" content="Radar2025 Team">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Radar2025 - Platform for frivillige, kalender og feedback"
+    />
+    <meta
+      name="keywords"
+      content="Radar2025, frivillig, forum, kalender, feedback, om Radar"
+    />
+    <meta name="author" content="Radar2025 Team" />
     <title>Radar2025</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/kalender.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/kalender.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Radar Logo">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li class="nav-item">
-                    <a href="kalender.html" class="nav-link">Kalender</a>
-                    <ul class="dropdown-menu">
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="frivillig.html" class="nav-link">Frivillig</a>
-                    <ul class="dropdown-menu">
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="forum.html" class="nav-link">Forum</a>
-                    <ul class="dropdown-menu">
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="feedback.html" class="nav-link">Feedback</a>
-                    <ul class="dropdown-menu">
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="omradar.html" class="nav-link">Om Radar</a>
-                    <ul class="dropdown-menu">
-                    </ul>
-                </li>
-            </ul>
-            <div class="nav-buttons">
-                <button class="login">Log ind</button>
-                <button class="signup">Opret</button>
-            </div>
-            <div class="nav-mini-icons">
-                <i class="fas fa-sign-in-alt login-icon" title="Login"></i>
-                <i class="fas fa-user-plus signup-icon" title="Opret bruger"></i>
-            </div>
-            <div class="burger">
-                <div class="burgerline"></div>
-                <div class="burgerline"></div>
-                <div class="burgerline"></div>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/radarlogo3.png" alt="Radar Logo" />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="kalender.html" class="nav-link">Kalender</a>
+            <ul class="dropdown-menu"></ul>
+          </li>
+          <li class="nav-item">
+            <a href="frivillig.html" class="nav-link">Frivillig</a>
+            <ul class="dropdown-menu"></ul>
+          </li>
+          <li class="nav-item">
+            <a href="forum.html" class="nav-link">Forum</a>
+            <ul class="dropdown-menu"></ul>
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+            <ul class="dropdown-menu"></ul>
+          </li>
+          <li class="nav-item">
+            <a href="omradar.html" class="nav-link">Om Radar</a>
+            <ul class="dropdown-menu"></ul>
+          </li>
+        </ul>
+        <div class="nav-buttons">
+          <button class="login">Log ind</button>
+          <button class="signup">Opret</button>
+        </div>
+        <div class="nav-mini-icons">
+          <i class="fas fa-sign-in-alt login-icon" title="Login"></i>
+          <i class="fas fa-user-plus signup-icon" title="Opret bruger"></i>
+        </div>
+        <div class="burger">
+          <div class="burgerline"></div>
+          <div class="burgerline"></div>
+          <div class="burgerline"></div>
+        </div>
+      </nav>
     </header>
-    
+
     <main>
-    
-        <div class="flex-container">
-            <h1 class="main-title">Se hvem der spiller hvornår</h1>
-            <div class="slider-calender-container">
-                <div class="calendar-wrapper">
-                    <h2 class="calendar-title">December 2024</h2>
-                    <div class="calendar-days">
-                        <!-- Dynamisk genererede dage indsættes her via JavaScript -->
-                    </div>
-                    <button id="select-button" class="select-button" disabled>Vælg</button>
-                </div>
+      <div class="flex-container">
+        <div class="slider-calender-container">
+          <h1 class="main-title">Se hvem der spiller hvornår</h1>
+          <div class="calendar-wrapper">
+            <h2 class="calendar-title">December 2024</h2>
+            <div class="calendar-days">
+              <!-- Dynamisk genererede dage indsættes her via JavaScript -->
             </div>
+            <button id="select-button" class="select-button" disabled>
+              Vælg
+            </button>
+          </div>
         </div>
-        
-        
+      </div>
 
-    <div class="main-container">
+      <div class="main-container">
+        <div class="slider-section">
+          <!-- Overskriften er nu placeret før slideren -->
+          <h1 class="slider-heading">
+            Se hvad du gik glip af <br />
+            sidste år!
+          </h1>
+          <p class="slider-description">
+            Hos Radar har vi samlet nogle af de bedste øjeblikke fra sidste år,
+            så du kan få et indblik i, hvad der venter dig i år!
+          </p>
+          <!-- Slideren kommer efter teksten -->
+        </div>
 
-        
-    <div class="slider-section">
-        <!-- Overskriften er nu placeret før slideren -->
-        <h1 class="slider-heading">Se hvad du gik glip af <br> sidste år!</h1>
-        <p class="slider-description">Hos Radar har vi samlet nogle af de bedste øjeblikke fra sidste år, så du kan få et indblik i, hvad der venter dig i år!</p>
-        <!-- Slideren kommer efter teksten -->
-    </div>
-        
         <div class="slider-container">
-            <button class="slider-btn left" onclick="moveSlide(-1)">&#10094;</button>
-            <div class="slider">
-                <div class="slider-card">
-                    <img src="/img/Cloth.jpg" alt="Clothing Club" />
-                    <h3>Clothing Club</h3>
-                    <a href="https://radarlive.dk/kalender/2024/december/clothing-club/">Udforsk &#8594;</a>
-                </div>
-                <div class="slider-card">
-                    <img src="/img/bushbabies.jpeg" alt="Bush Babies" />
-                    <h3>Bush Babies</h3>
-                    <a href="https://radarlive.dk/kalender/2025/february/bushbabies-knudsenbremerewert/">Udforsk &#8594;</a>
-                </div>
-                <div class="slider-card">
-                    <img src="/img/ungskab.png" alt="UNG-SKAB" />
-                    <h3>UNG-SKAB</h3>
-                    <a href="https://radarlive.dk/kalender/2025/april/ung-skab/">Udforsk &#8594;</a>
-                </div>
-                <div class="slider-card">
-                    <img src="/img/syl.png" alt="Syl + omsorg" />
-                    <h3>Syl + omsorg</h3>
-                    <a href="https://radarlive.dk/kalender/2025/february/syl-plus-omsorg/">Udforsk &#8594;</a>
-                </div>
-                <div class="slider-card">
-                    <img src="/img/merry.jpg" alt="merry" />
-                    <h3>Merry</h3>
-                    <a href="https://radarlive.dk/kalender/2025/march/reveal-party/">Udforsk &#8594;</a>
-                </div>
-                <div class="slider-card">
-                    <img src="/img/asbjørn.jpg" alt="Asbjørn" />
-                    <h3>Asbjørn</h3>
-                    <a href="https://radarlive.dk/kalender/2025/march/asbjoern/">Udforsk &#8594;</a>
-                </div>
+          <button class="slider-btn left" onclick="moveSlide(-1)">
+            &#10094;
+          </button>
+          <div class="slider">
+            <div class="slider-card">
+              <img src="/img/Cloth.jpg" alt="Clothing Club" />
+              <h3>Clothing Club</h3>
+              <a
+                href="https://radarlive.dk/kalender/2024/december/clothing-club/"
+                >Udforsk &#8594;</a
+              >
             </div>
-            <button class="slider-btn right" onclick="moveSlide(1)">&#10095;</button>
+            <div class="slider-card">
+              <img src="/img/bushbabies.jpeg" alt="Bush Babies" />
+              <h3>Bush Babies</h3>
+              <a
+                href="https://radarlive.dk/kalender/2025/february/bushbabies-knudsenbremerewert/"
+                >Udforsk &#8594;</a
+              >
+            </div>
+            <div class="slider-card">
+              <img src="/img/ungskab.png" alt="UNG-SKAB" />
+              <h3>UNG-SKAB</h3>
+              <a href="https://radarlive.dk/kalender/2025/april/ung-skab/"
+                >Udforsk &#8594;</a
+              >
+            </div>
+            <div class="slider-card">
+              <img src="/img/syl.png" alt="Syl + omsorg" />
+              <h3>Syl + omsorg</h3>
+              <a
+                href="https://radarlive.dk/kalender/2025/february/syl-plus-omsorg/"
+                >Udforsk &#8594;</a
+              >
+            </div>
+            <div class="slider-card">
+              <img src="/img/merry.jpg" alt="merry" />
+              <h3>Merry</h3>
+              <a href="https://radarlive.dk/kalender/2025/march/reveal-party/"
+                >Udforsk &#8594;</a
+              >
+            </div>
+            <div class="slider-card">
+              <img src="/img/asbjørn.jpg" alt="Asbjørn" />
+              <h3>Asbjørn</h3>
+              <a href="https://radarlive.dk/kalender/2025/march/asbjoern/"
+                >Udforsk &#8594;</a
+              >
+            </div>
+          </div>
+          <button class="slider-btn right" onclick="moveSlide(1)">
+            &#10095;
+          </button>
         </div>
-    </div>
+      </div>
 
-
-
-        <script src="js/kalender.js"></script>
+      <script src="js/kalender.js"></script>
     </main>
-    
-    
-
 
     <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo til venstre -->
-            <div class="footer-logo">
-                <img src="img/logo.png" alt="Radar Logo" />
-            </div>
-
-            <!-- Kolonnerne -->
-            <div class="footer-columns">
-                <div class="footer-column">
-                    <h3>Kom igang</h3>
-                    <ul>
-                        <li><a href="#">Download app</a></li>
-                        <li><a href="#">Forum</a></li>
-                        <li><a href="#">Kalender</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Konto</h3>
-                    <ul>
-                        <li><a href="#">Log In</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Medlem</h3>
-                    <ul>
-                        <li><a href="#">Partnere</a></li>
-                        <li><a href="#">Karriere</a></li>
-                        <li><a href="#">Frivillig</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="footer-container">
+        <!-- Logo til venstre -->
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="Radar Logo" />
         </div>
 
-        <!-- Sociale medier ikoner (uden tekst) -->
-        <div class="social-media-icons">
-            <a href="https://www.facebook.com/radarlive/?locale=da_DK" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/radarlive/?hl=da" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+        <!-- Kolonnerne -->
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>Kom igang</h3>
+            <ul>
+              <li><a href="#">Download app</a></li>
+              <li><a href="#">Forum</a></li>
+              <li><a href="#">Kalender</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Konto</h3>
+            <ul>
+              <li><a href="#">Log In</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Medlem</h3>
+            <ul>
+              <li><a href="#">Partnere</a></li>
+              <li><a href="#">Karriere</a></li>
+              <li><a href="#">Frivillig</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+
+      <!-- Sociale medier ikoner (uden tekst) -->
+      <div class="social-media-icons">
+        <a
+          href="https://www.facebook.com/radarlive/?locale=da_DK"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/radarlive/?hl=da"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
