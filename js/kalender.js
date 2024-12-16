@@ -102,9 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
   selectButton.addEventListener("click", function () {
     if (selectedDate) {
       const artists = [
-        { name: "Bissevinet", image: "IMG/bissesvinet.jpg" },
-        { name: "Gorgeous", image: "IMG/gorgeuys.jpg" },
-        { name: "Anna Roemer", image: "IMG/annaroemer.jpg" },
+        { name: "Bissevinet", image: "/img/bissesvinet.jpg" },
+        { name: "Gorgeous", image: "/img/gorgeuys.jpg" },
+        { name: "Anna Roemer", image: "/img/annaroemer.jpg" },
       ];
 
       // Vælg en tilfældig kunstner
