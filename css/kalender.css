@@ -61,7 +61,7 @@
     border-radius: 10px;
     padding: 30px; /* Øg padding for at gøre kalenderen større */
     text-align: center;
-    width: 100%;
+    width: 80%;
     max-width: 800px; /* Øget maksimal bredde på kalenderen */
     margin: 0 auto; /* Centrerer kalenderen horisontalt */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tilføjer skygge */
@@ -136,24 +136,13 @@
     background-color: #C32B59; /* Lysere rød ved hover */
 }
 
-.main-title {
+.kalender-main-title {
     display: flex;
     justify-content: center;
     align-self: center;
-    color: white; /* Sætter teksten til hvid */
-    font-size: 4.5em; /* Juster størrelsen, hvis nødvendigt */
-    line-height: 1.2;
-    margin-bottom: 0;
-    padding-left: 0; /* Hvis du vil justere venstre padding */
-    text-align: left; /* Sørger for at teksten er venstrejusteret */
-    position: relative;
-    z-index: 1; /* Sørger for at teksten er over andre elementer */
-    margin-bottom: 50px;
+    color: white;
+    font-size: 6.5vh;
 }
-
-
-
-
 
 
 /* Slider container */
@@ -327,7 +316,7 @@
 @media (max-width: 480px) {
 
 
-    .main-title {
+    .kalender-main-title {
         font-size: 2.5em; /* Juster fontstørrelse for små skærme */
         text-align: center; /* Centrerer teksten */
         padding-left: 0; /* Fjerner venstre padding */
@@ -351,6 +340,10 @@
         box-shadow: none;
         z-index: 0; /* Sørger for, at den ikke overlapper forkert */
 
+    }
+
+    .calender-wrapper {
+        max-width: 60%;
     }
 
     .slider-card {
