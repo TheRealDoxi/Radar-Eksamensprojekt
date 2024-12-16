@@ -335,7 +335,7 @@ p {
 
 @media (max-width: 480px) {
     .text-content h1, .text-content-artister h1, .text-content-playliste h1 {
-        font-size: 2em; 
+        font-size: 3em; 
     }
 
     .text-content p, .text-content-artister p, .text-content-playliste p {
@@ -343,7 +343,7 @@ p {
     }
 
     .artist-card {
-        width: 100%; 
+        width: 80%; 
     }
 
     .read-more-button {
