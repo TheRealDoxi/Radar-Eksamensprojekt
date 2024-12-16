@@ -317,4 +317,11 @@
     .rules-box li {
         font-size: 1.2em;
     }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+        font-size: 0.6em;
+    }
+
 }
