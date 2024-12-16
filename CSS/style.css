@@ -1,28 +1,26 @@
-/* Body Styling */
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif; /* Hvis du bruger Inter font */
-    background-color: #0A0C10; /* Baggrundsfarve */
+    font-family: 'Inter', sans-serif; 
+    background-color: #0A0C10; 
     background-image: url('/img/gradient2.jpg');
-    background-size: cover; /* Sørg for, at billedet fylder hele området */
-    background-repeat: no-repeat; /* Undgå gentagelse af billedet */
-    background-position: center center; /* Juster billedet til midten */
-    height: auto; /* Lad body have automatisk højde */
-    overflow: auto; /* Sørg for, at footer ikke bliver skjult */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    height: auto; 
+    overflow: auto; 
 }
 
-/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 95%;
     padding: 10px 20px;
-    background-color: rgba(114, 89, 89, 0.2); /* Samme baggrundsfarve for hele sektionen */
-    border-radius: 35px; /* Afrundede hjørner */
-    border: 0.01px solid rgba(255, 255, 255, 0.2); /* Hvid ramme */
+    background-color: rgba(114, 89, 89, 0.2); 
+    border-radius: 35px; 
+    border: 0.01px solid rgba(255, 255, 255, 0.2); 
     position: relative;
-    margin:20px 20px 0 20px; /* Top: 20px, Højre: 20px, Bund: 0px, Venstre: 20px */
+    margin:20px 20px 0 20px; 
 }
 
 .navbar .logo {
@@ -31,44 +29,43 @@ body {
 }
 
 .nav-icons {
-    display: none; /* Standard: Skjul ikonerne */
+    display: none; 
 }
 
 .logo img {
-    height: 100px; /* Juster højden på logoet */
-    width: auto;  /* Bevarer billedets proportioner */
+    height: 100px; 
+    width: auto;  
     display: block;
     margin: 0;
     padding: 0;
 }
 
-/* Navbar Links Styling */
 .nav-links {
     list-style: none;
-    display: flex; /* Holder punkterne på en linje */
-    gap: 70px; /* Mere plads mellem menupunkterne */
+    display: flex; 
+    gap: 70px; 
     margin: 0;
-    padding: 25px 70px; /* Indre afstand i boksen */
-    background-color: rgba(114, 89, 89, 0.2); /* Grå baggrund med 20% opacitet */
-    border-radius: 30px; /* Afrundede hjørner */
-    border: 0.01px solid rgba(255, 255, 255, 0.205); /* Hvid ramme med standard tykkelse (kan ændres) */
+    padding: 25px 70px; 
+    background-color: rgba(114, 89, 89, 0.2); 
+    border-radius: 30px; 
+    border: 0.01px solid rgba(255, 255, 255, 0.205); 
 }
 
 .nav-links li {
     display: inline;
-    position: relative; /* For at placere dropdown-menuen relativt */
+    position: relative; 
 }
 
 .nav-links a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.884);
     font-size: 1.2em;
-    padding: 10px 15px; /* Klikområde omkring menupunkterne */
-    transition: background-color 0.9s ease; /* Glidende hover-effekt */
+    padding: 10px 15px; 
+    transition: background-color 0.9s ease;
 }
 
 .nav-item.active .dropdown-menu {
-    display: block; /* Vis dropdown-menu, når active er tilføjet */
+    display: block; 
 }
 
 .dropdown-menu li {
@@ -82,24 +79,23 @@ body {
     display: block;
 }
 
-/* Navbar Buttons Styling */
 .nav-buttons {
     display: flex;
     gap: 10px;
 }
 
 .nav-mini-icons {
-    display: none; /* Standard: Skjul ikonerne */
+    display: none; 
 }
 
 .nav-buttons .login,
 .nav-buttons .signup {
-    padding: 10px 20px; /* Juster størrelsen på knapperne */
+    padding: 10px 20px; 
     cursor: pointer;
     font-size: 1.2em;
-    border-radius: 20px; /* Afrundede hjørner */
-    border: none; /* Fjern kantlinje */
-    transition: background-color 0.3s, color 0.3s; /* Glidende effekt */
+    border-radius: 20px; 
+    border: none; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 .nav-buttons .login {
@@ -122,20 +118,19 @@ body {
     color: white;
 }
 
-/* Burger Menu Styling */
 .burger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    z-index: 9999; /* Høj z-index for at sikre, at den er foran alt andet */
+    z-index: 9999; 
 }
 
 .burger .burgerline {
     width: 30px;
     height: 4px;
     background-color: white;
-    transition: all 0.3s ease-in-out; /* Tilføj en smooth transition */
+    transition: all 0.3s ease-in-out; 
 }
 
 .burger.toggle .burgerline:nth-child(1) {
@@ -143,14 +138,13 @@ body {
 }
 
 .burger.toggle .burgerline:nth-child(2) {
-    opacity: 0; /* Skjuler midterlinjen */
+    opacity: 0; 
 }
 
 .burger.toggle .burgerline:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Footer Styling */
 .footer {
     color: white;
     padding: 40px 20px;
@@ -232,29 +226,28 @@ body {
     color: #A41045;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Skjul menuen som standard */
-        flex-direction: column; /* Lodret menu */
+        display: none; 
+        flex-direction: column; 
         position: absolute;
-        top: 50px; /* Justér position under navbar */
-        right: 10px; /* Sørg for, at menuen er helt til højre */
-        background-color: #0A0C10; /* Baggrundsfarve */
-        width: auto; /* Tilpas bredden til indholdet */
-        padding: 10px 20px; /* Indre afstand */
-        border-radius: 10px; /* Afrundede hjørner */
-        gap: 10px; /* Mindre mellemrum mellem menupunkter */
+        top: 50px; 
+        right: 10px; 
+        background-color: #0A0C10; 
+        width: auto; 
+        padding: 10px 20px; 
+        border-radius: 10px; 
+        gap: 10px; 
     }
 
     .nav-links.active {
-        display: flex; /* Vis dropdown-menuen, når den er aktiv */
+        display: flex; 
     }
 
     .burger {
-        display: flex; /* Sørger for, at burger-menuen vises */
+        display: flex; 
         position: absolute;
-        right: 10px; /* Ryk burger-menuen til højre */
+        right: 10px; 
     }
 
     .footer-container {
@@ -276,61 +269,60 @@ body {
     }
 
     .nav-buttons {
-        display: none; /* Skjul knapperne */
+        display: none; 
     }
 
    .navbar {
-        height: 50px; /* Reducer højden */
-        padding: 5px 10px; /* Juster padding */
-        margin: 0; /* Fjern marginer på siderne */
-        display: flex; /* Sørg for, at navbar fungerer som en flekscontainer */
-        justify-content: space-between; /* Centrerer navbar-indholdet horisontalt */
-        align-items: center; /* Centrerer navbar-indholdet vertikalt */
+        height: 50px;
+        padding: 5px 10px; 
+        margin: 0; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
     }
 
     .navbar .logo img {
-        height: 60px; /* Reducer højden på logoet for at passe til mindre navbar */
+        height: 60px; 
         border-radius: 30px;
     }
 
     .nav-links {
         display: none;
-        flex-direction: column; /* Sørger for, at dropdown-menuen er lodret */
+        flex-direction: column;
         position: absolute;
-        top: 50px; /* Justerer dropdown-menuens placering under navbar */
-        right: 10px; /* Rykker dropdown-menuen helt ud til højre */
-        background-color: #0A0C10; /* Baggrundsfarve for dropdown */
-        width: auto; /* Lad dropdown-menuen passe til indholdet */
-        padding: 10px 20px; /* Tilpas afstand inde i dropdown */
-        border-radius: 10px; /* Afrundede hjørner */
-        gap: 10px; /* Reducer mellemrum mellem hovedmenupunkterne */
+        top: 50px; 
+        right: 10px; 
+        background-color: #0A0C10; 
+        width: auto; 
+        padding: 10px 20px; 
+        border-radius: 10px; 
+        gap: 10px; 
     }
 
     .nav-links li {
-        margin: 0; /* Fjern ekstra margin omkring punkterne */
+        margin: 0; 
     }
 
 
     .nav-links a {
-        padding: 10px 15px; /* Reducer indre padding for at spare plads */
-        font-size: 1em; /* Mindre tekst for mobil */
+        padding: 10px 15px;
+        font-size: 1em; 
     }
 
     .nav-mini-icons {
-        display: flex !important; /* Vis ikonerne kun på små skærme */
+        display: flex !important; 
         gap: 10px;
-        position: absolute; /* Gør det muligt at placere ikonerne relativt til navbar */
-        right: 55px; /* Placer ikonerne til venstre for burger-menuen med lidt afstand */
-        top: 50%; /* Juster vertikalt for at centrere dem */
-        transform: translateY(-50%); /* Centrer ikonerne vertikalt i navbar */
+        position: absolute; 
+        right: 55px; 
+        top: 50%; 
+        transform: translateY(-50%); 
     }
     
     .nav-mini-icons i {
-        font-size: 1.5em; /* Størrelse på ikonerne */
-        color: white; /* Farve på ikonerne */
+        font-size: 1.5em;
+        color: white; 
         cursor: pointer;
         transition: color 0.3s ease;
     }
-
     
 }

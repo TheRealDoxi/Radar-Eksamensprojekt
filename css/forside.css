@@ -1,59 +1,56 @@
 .flex-container {
-    display: flex; /* Aktiverer flexbox */
-    align-items: center; /* Vertikal centreret */
-    justify-content: space-around; /* Giver jævnt mellemrum mellem elementerne */
-    padding: 50px; /* Giver indre afstand */
-    color: white; /* Hvid tekst */
-    gap: 30px; /* Afstand mellem tekst og billede */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    padding: 50px; 
+    color: white; 
+    gap: 30px; 
     margin-top: 100px;
 
 }
 
 .text-content {
-    max-width: 50%; /* Sørg for, at teksten ikke fylder for meget */
+    max-width: 50%; 
 }
 
 .text-content h1 {
-    font-size: 4.5em; /* Stor overskrift */
+    font-size: 4.5em; 
     line-height: 1.2;
     margin-bottom: 0px;
 }
 
 .text-content p {
-    font-size: 1.2em; /* Lidt mindre tekst */
-    line-height: 1.6; /* Lidt mere luft mellem linjer */
-    padding: 10px 0; /* Lidt ekstra plads omkring teksten */
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    padding: 10px 0; 
 }
 
 .image-content img {
-    max-width: 150%; /* Gør billedet responsivt */
-    height: auto; /* Bevarer proportionerne */
-    border-radius: 10px; /* Bløder billedets kanter op */
-    margin-right: -20px; /* Rykker billedet længere til venstre */
+    max-width: 150%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-right: -20px; 
 }
-
-
-
 
 
 .flex-container-artister {
-    display: flex; /* Aktiverer flexbox */
-    align-items: center; /* Vertikal centreret */
-    justify-content: center; /* Horisontal centering */
-    height: 25vh; /* Fylder hele skærmhøjden */
-    padding: 50px; /* Giver indre afstand */
-    color: white; /* Hvid tekst */
-    gap: 30px; /* Afstand mellem tekst og billede */
-    text-align: center; /* Centrerer teksten inden i containeren */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 25vh; 
+    padding: 50px; 
+    color: white; 
+    gap: 30px; 
+    text-align: center; 
 }
 
 .text-content-artister {
-    max-width: 50%; /* Sørg for, at teksten ikke fylder for meget */
+    max-width: 50%; 
 }
 
 .text-content-artister h1 {
     font-size: 4.5em;
-    margin-bottom: 40px; /* Reduceret margin */
+    margin-bottom: 40px; 
     line-height: 1.2;
 }
 
@@ -62,29 +59,26 @@
     line-height: 1.6;
 }
 
-
-
-
 .artists-container {
     display: flex;
     justify-content: space-evenly;
-    gap: 10px; /* Mellemrum mellem kortene */
-    flex-wrap: wrap; /* Tillader at kortene går til en ny linje på små skærme */
+    gap: 10px; 
+    flex-wrap: wrap; 
     padding: 50px;
 }
 
 .artist-card {
-    background-color: #121417; /* Baggrundsfarve for kortene */
+    background-color: #121417; 
     padding: 20px;
     text-align: center;
-    border-radius: 15px; /* Bløde hjørner */
+    border-radius: 15px; 
     width: 180px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Skaber skyggeeffekt */
-    transition: transform 0.3s ease; /* Effekten når kortet bliver hoveret */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
 }
 
 .artist-card:hover {
-    transform: translateY(-10px); /* Giver en effekt, når kortet bliver hoveret */
+    transform: translateY(-10px); 
 }
 
 .artist-image {
@@ -93,14 +87,14 @@
     width: 130px;
     height: 130px;
     margin: 0 auto 20px;
-    overflow: hidden; /* Skjuler alt udenfor den cirkulære form */
-    border-radius: 50%; /* Gør billedet rundt */
+    overflow: hidden; 
+    border-radius: 50%; 
 }
 
 .artist-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Sørger for at billedet dækker hele cirklen */
+    object-fit: cover; 
 }
 
 h3 {
@@ -111,65 +105,63 @@ h3 {
 
 p {
     font-size: 1em;
-    color: #bbb; /* Lysegrå tekst */
+    color: #bbb; 
     margin: 0;
     font-weight: 600;
 }
 
 
 .artist-card a {
-    text-decoration: none; /* Fjerner understregning fra link */
-    color: inherit; /* Bevarer farven fra teksten */
+    text-decoration: none; 
+    color: inherit; 
     gap: 20px;
 }
 
 .artist-card a p {
-    color: #bbb; /* Ændrer farven på linket til lys grå */
-    transition: color 0.3s ease; /* Tilføjer en overgangseffekt */
+    color: #bbb; 
+    transition: color 0.3s ease; 
     gap: 20px;
 }
 
 .artist-card a:hover p {
-    color: #fff; /* Ændrer farven på linket, når man hover over */
+    color: #fff; 
 }
 
 
-/* Styling af knappen */
+
 .read-more-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Afstand til kortene */
+    margin-top: 30px; 
 }
 
 .read-more-button {
-    background-color: #A41045; /* Farven på knappen */
-    color: white; /* Hvid tekst */
-    padding: 15px 30px; /* Polstring omkring teksten */
-    font-size: 1.2em; /* Størrelse på tekst */
-    text-decoration: none; /* Fjerner understregning */
-    border-radius: 30px; /* Runde hjørner */
-    transition: background-color 0.3s ease; /* Effekt ved hover */
+    background-color: #A41045; 
+    color: white; 
+    padding: 15px 30px; 
+    font-size: 1.2em; 
+    text-decoration: none; 
+    border-radius: 30px; 
+    transition: background-color 0.3s ease; 
 }
 
-/* Hover-effekt på knappen */
+
 .read-more-button:hover {
-    background-color: #8c0f36; /* Ændrer farven når man hover */
+    background-color: #8c0f36;
 }
-
-
 
 
 .flex-container-playliste{
-    display: flex; /* Aktiverer flexbox */
-    align-items: center; /* Vertikal centreret */
-    justify-content: space-around; /* Giver jævnt mellemrum mellem elementerne */
-    padding: 50px; /* Giver indre afstand */
-    color: white; /* Hvid tekst */
-    gap: 30px; /* Afstand mellem tekst og billede */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    padding: 50px; 
+    color: white; 
+    gap: 30px; 
 }
 
 .text-content-playliste {
-    max-width: 50%; /* Sørg for, at teksten ikke fylder for meget */
+    max-width: 50%; 
     text-align: left;
 }
 
@@ -181,197 +173,193 @@ p {
 .playliste-section p {
     font-size: 1.2em;
     margin-bottom: 10px;
-    position: relative; /* Sørger for, at den cirkulære knap kan placeres relativt til denne container */
+    position: relative; 
 }
 
 .line {
-    width: 100%; /* Linjen fylder hele bredden af containeren */
-    height: 2px; /* Tykkelsen på linjen */
-    background-color: #808080; /* Grå farve */
-    border-radius: 50px; /* Cirkulær ende til venstre */
+    width: 100%; 
+    height: 2px; 
+    background-color: #808080; 
+    border-radius: 50px; 
     position: relative;
 }
 
 .line::before {
     content: '';
     position: absolute;
-    left: -10px; /* Fjerner lidt fra venstre side for at skabe en cirkulær ende */
+    left: -10px; 
     top: 50%;
     width: 20px;
     height: 20px;
-    background-color: #808080; /* Grå farve */
-    border-radius: 50%; /* Cirkulær form */
+    background-color: #808080; 
+    border-radius: 50%; 
     transform: translateY(-50%);
 }
 
 
 .text-content-playliste h1 {
-    font-size: 2.5em; /* Stor overskrift */
+    font-size: 2.5em; 
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .text-content-playliste p {
-    font-size: 1.2em; /* Lidt mindre tekst */
-    line-height: 1.6; /* Lidt mere luft mellem linjer */
-    padding: 10px 0; /* Lidt ekstra plads omkring teksten */
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    padding: 10px 0; 
 }
 
 .image-content-playliste img {
-    max-width: 70%; /* Gør billedet responsivt */
-    height: auto; /* Bevarer proportionerne */
-    border-radius: 10px; /* Bløder billedets kanter op */
-    margin-right: -20px; /* Rykker billedet længere til venstre */
+    max-width: 70%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-right: -20px; 
 }
 
 .playliste-section p a {
-    text-decoration: underline; /* Understreger linket */
-    color: #A41045; /* Farve på teksten - du kan ændre denne til hvad du ønsker */
-    font-weight: bold; /* Gør teksten fed (kan fjernes, hvis du ønsker en mere diskret stil) */
-    transition: all 0.3s ease; /* Smooth transition til hover-effekt */
+    text-decoration: underline; 
+    color: #A41045; 
+    font-weight: bold; 
+    transition: all 0.3s ease; 
 }
 
 .playliste-section p a:hover {
-    color: #C32B59; /* Ændrer farven ved hover */
-    text-decoration: none; /* Fjern understrygningen på hover */
+    color: #C32B59; 
+    text-decoration: none; 
 }
 
-
-/* Responsiv styling */
 @media (max-width: 768px) {
-    /* Generelt for flex-container */
     .flex-container, .flex-container-artister, .flex-container-playliste {
-        flex-direction: column; /* Stabler tekst og billede vertikalt */
-        align-items: center; /* Centrerer alle elementer horisontalt */
-        text-align: center; /* Centrerer teksten */
-        padding: 20px; /* Reduceret padding for bedre udnyttelse af plads */
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        padding: 20px; 
     }
 
     .text-content, .text-content-artister, .text-content-playliste {
-        max-width: 100%; /* Gør teksten bredere på små skærme */
-        padding: 0 10px; /* Giver lidt luft på siderne */
+        max-width: 100%;
+        padding: 0 10px; 
     }
 
     .text-content h1, .text-content-artister h1, .text-content-playliste h1 {
-        font-size: 2.5em; /* Juster størrelse på overskrifter */
-        margin-bottom: 20px; /* Mere plads under overskrifter */
+        font-size: 2.5em; 
+        margin-bottom: 20px; 
     }
 
     .text-content p, .text-content-artister p, .text-content-playliste p {
-        font-size: 1em; /* Lidt mindre tekst */
+        font-size: 1em; 
         line-height: 1.6;
-        margin-bottom: 20px; /* Plads under afsnit */
+        margin-bottom: 20px; 
     }
 
-    /* Billeder */
+   
     .image-content img, .image-content-playliste img {
-        max-width: 80%; /* Reducer billedstørrelsen */
+        max-width: 80%; 
         height: auto;
-        margin: 20px auto; /* Centrerer billedet og giver luft omkring */
+        margin: 20px auto; 
     }
 
     .artists-container {
-        flex-direction: column; /* Stabler kortene vertikalt på små skærme */
-        align-items: center; /* Centrerer kortene */
-        gap: 20px; /* Øget afstand mellem kortene */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
     }
 
     .artist-card {
-        width: 80%; /* Gør kortene bredere og tilpasser dem til små skærme */
-        margin-bottom: 20px; /* Plads mellem kortene */
+        width: 80%; 
+        margin-bottom: 20px; 
     }
 
     .artist-image {
-        width: 120px; /* Mindre billedstørrelse i kortet */
+        width: 120px; 
         height: 120px;
     }
 
     .read-more-container {
-        margin-top: 20px; /* Plads til knappen */
+        margin-top: 20px; 
     }
 
     .read-more-button {
-        font-size: 1em; /* Mindre tekststørrelse på knappen */
-        padding: 10px 20px; /* Justeret polstring */
+        font-size: 1em; 
+        padding: 10px 20px; 
     }
 
     .line {
-        width: 60%; /* Linjen fylder kun en del af bredden på små skærme */
-        margin: 0 auto; /* Centrerer linjen */
+        width: 60%; 
+        margin: 0 auto; 
     }
 
     .line::before {
-        left: -5px; /* Juster venstre position for den cirkulære ende */
+        left: -5px; 
     }
 
-    /* Kalender - hvis du har en kalender, skal du også sikre, at den tilpasser sig til små skærme */
+    
     .calendar-container {
-        width: 100%; /* Kalenderen skal fylde hele bredden */
-        padding: 20px; /* Juster padding */
-        box-shadow: none; /* Fjern skygge for bedre visning på små skærme */
+        width: 100%; 
+        padding: 20px; 
+        box-shadow: none; 
     }
 
     .calendar-days, .calendar-grid {
-        grid-template-columns: repeat(7, 1fr); /* Sørg for, at dagene stadig vises korrekt */
-        gap: 10px; /* Mindre afstand mellem dagene */
-        font-size: 1em; /* Justeret skriftstørrelse */
+        grid-template-columns: repeat(7, 1fr); 
+        gap: 10px; 
+        font-size: 1em; 
     }
 
     .day {
-        height: 40px; /* Juster dagstørrelsen */
+        height: 40px; 
     }
 
     .slider-card {
-        flex: 0 0 100%; /* Vis kun én slider card ad gangen */
-        margin-bottom: 20px; /* Plads mellem kortene */
+        flex: 0 0 100%; 
+        margin-bottom: 20px; 
     }
 
     .slider-heading {
-        font-size: 2em; /* Justeret overskriftstørrelse */
+        font-size: 2em; 
     }
 
     .slider-description {
-        font-size: 1em; /* Mindre beskrivelses tekst */
+        font-size: 1em; 
     }
 
     .line {
-        display: none; /* Skjuler linjen på små skærme */
+        display: none; 
     }
 
     .image-content-playliste img {
-        width: 70%; /* Gør billedet mindre på telefonskærme */
-        max-width: 300px; /* Sætter en maksimal bredde */
-        margin: 0 auto; /* Centrerer billedet horisontalt */
-        display: block; /* Sikrer at billedet er en blok for korrekt centering */
+        width: 70%; 
+        max-width: 300px; 
+        margin: 0 auto; 
+        display: block; 
     }    
 
 }
 
-/* For meget små skærme under 480px */
+
 @media (max-width: 480px) {
-    /* Flere justeringer til de meget små skærme */
     .text-content h1, .text-content-artister h1, .text-content-playliste h1 {
-        font-size: 2em; /* Mindre overskrifter */
+        font-size: 2em; 
     }
 
     .text-content p, .text-content-artister p, .text-content-playliste p {
-        font-size: 0.9em; /* Yderligere reduceret tekststørrelse */
+        font-size: 0.9em; 
     }
 
     .artist-card {
-        width: 100%; /* Kortene fylder hele bredden på meget små skærme */
+        width: 100%; 
     }
 
     .read-more-button {
-        font-size: 1em; /* Standard knapstørrelse */
+        font-size: 1em; 
     }
 
     .slider-card {
-        flex: 0 0 100%; /* Kun én slider card pr. gang */
+        flex: 0 0 100%; 
     }
 
     .line {
-        display: none; /* Skjuler linjen på små skærme */
+        display: none; 
     }
     
 }

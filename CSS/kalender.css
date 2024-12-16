@@ -1,14 +1,11 @@
-/* Main container */
 .main-container {
     display: flex;
-    flex-direction: column; /* For vertikalt layout */
-    align-items: center; /* Centrerer indholdet horisontalt */
-    width: 100%; /* Gør containeren så bred som muligt */
-    z-index: 0; /* Sørger for, at videoen ligger bag andre elementer */
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    z-index: 0; 
 }
 
-
-/* Justering af tekst-sektionen */
 .text-content {
     max-width: 50%;
     position: relative;
@@ -54,71 +51,66 @@
     transform: translateY(-50%);
 }
 
-
-/* Kalender Container */
 .calendar-wrapper {
-    background-color: #5b58586a; /* Grå baggrundsfarve */
+    background-color: #5b58586a;
     border-radius: 10px;
-    padding: 30px; /* Øg padding for at gøre kalenderen større */
+    padding: 30px; 
     text-align: center;
     width: 80%;
-    max-width: 800px; /* Øget maksimal bredde på kalenderen */
-    margin: 0 auto; /* Centrerer kalenderen horisontalt */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tilføjer skygge */
+    max-width: 800px; 
+    margin: 0 auto; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Måneds Titel */
 .calendar-title {
-    font-size: 2.5em; /* Øg fontstørrelse på månedsnavnet */
+    font-size: 2.5em; 
     margin-bottom: 20px;
     color: #ffffff;
 }
 
-/* Dage container */
 .calendar-days {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 kolonner */
-    gap: 15px; /* Øg gap mellem dagene */
-    padding: 15px; /* Øg padding omkring dagene */
-    font-size: 1.5em; /* Øg fontstørrelse for dagene */
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 15px; 
+    padding: 15px; 
+    font-size: 1.5em; 
 }
 
-/* Individuelle dage */
+
 .day {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80px; /* Øg højden på dagene */
+    height: 80px; 
     background-color: #ffffff;
-    border: 2px solid rgb(0, 0, 0); /* Sort border */
+    border: 2px solid rgb(0, 0, 0); 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .day:hover {
-    background-color: #A41045; /* Lys rød hover-effekt */
+    background-color: #A41045; 
 }
 
 .day.extra {
     color: #999;
-    background-color: #eaeaea; /* Grå farve for ekstra dage */
-    border-style: dashed; /* Dash-stil for ekstra dage */
+    background-color: #eaeaea; 
+    border-style: dashed; 
 }
 
 .day.selected {
-    background-color: #C32B59; /* Lys rød for valgte dage */
+    background-color: #C32B59; 
 }
 
-/* Handlingsknap */
 .select-button {
-    background-color: #A41045; /* Rød baggrundsfarve */
-    color: #ffffff; /* Hvid tekst */
-    font-size: 1.5em; /* Øg fontstørrelse på knappen */
-    padding: 15px 30px; /* Øg padding på knappen */
+    background-color: #A41045; 
+    color: #ffffff; 
+    font-size: 1.5em; 
+    padding: 15px 30px; 
     border: none;
-    border-radius: 15px; /* Afrundede hjørner */
+    border-radius: 15px;
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
@@ -128,12 +120,12 @@
 }
 
 .select-button:disabled {
-    background-color: #A41045; /* Grå baggrund, når knappen er deaktiveret */
+    background-color: #A41045; 
     cursor: not-allowed;
 }
 
 .select-button:hover:enabled {
-    background-color: #C32B59; /* Lysere rød ved hover */
+    background-color: #C32B59; 
 }
 
 .kalender-main-title {
@@ -144,25 +136,22 @@
     font-size: 6.5vh;
 }
 
-
-/* Slider container */
 .slider-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-    overflow: hidden; /* Skjuler de elementer, der går udenfor containeren */
-    width: 100%; /* Fylder hele skærmbredden */
-    max-width: 100%; /* Maksimal bredde af containeren */
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.1)); /* Blød overgang */
+    overflow: hidden; 
+    width: 100%; 
+    max-width: 100%; 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.1)); 
 }
 
-/* Selve slideren */
 .slider {
     display: flex;
-    transition: transform 0.3s ease-in-out; /* Glidende effekt, når vi skifter slides */
-    width: calc(25% * 4 + 15px * 3); /* Beregn bredde af slideren for at vise 4 kort med margin */
+    transition: transform 0.3s ease-in-out; 
+    width: calc(25% * 4 + 15px * 3); 
 }
 
 .slider-card {
@@ -174,10 +163,9 @@
     text-align: center;
     transition: transform 0.3s ease-in-out;
     box-sizing: border-box;
-    z-index: 1; /* Sørg for, at sliderkortene ikke bliver skjult */
+    z-index: 1; 
 }
 
-/* Link i slider kort */
 .slider-card a {
     display: block;
     margin-top: 10px;
@@ -186,22 +174,18 @@
     text-decoration: none;
 }
 
-
-/* Billeder i slideren */
 .slider-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-/* Tekst i slider kort */
 .slider-card h3 {
     margin-top: 15px;
     font-size: 1.3em;
     color: #fff;
 }
 
-/* Link i slider kort */
 .slider-card a {
     display: block;
     margin-top: 10px;
@@ -210,7 +194,6 @@
     text-decoration: none;
 }
 
-/* Knapperne til navigation */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -224,57 +207,51 @@
     z-index: 1;
 }
 .slider-card img {
-    width: 100%;  /* Sørg for at billedet fylder hele bredden af kortet */
-    height: 200px; /* Sæt en fast højde på billederne for at forhindre dem i at blive for høje */
-    object-fit: cover; /* Sørg for at billedet dækker hele containeren uden at blive strakt */
-    border-radius: 10px; /* Behold rundede hjørner */
+    width: 100%;  
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 10px; 
 }
 
-
-/* Venstre knap */
 .left {
     left: 10px;
 }
 
-/* Højre knap */
 .right {
     right: 10px;
 }
 
 .slider-heading {
-    color: white; /* Gør overskriften hvid */
-    font-size: 2.5em; /* Ændrer størrelsen på overskriften (juster som ønsket) */
-    margin-bottom: 20px; /* Tilføjer lidt plads under overskriften */
-    text-align: center; /* Centrerer overskriften */
-    font-weight: bold; /* Gør overskriften fed */
-    padding-top: 20px; /* Tilføjer lidt afstand til toppen af sektionen */
+    color: white; 
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    font-weight: bold; 
+    padding-top: 20px; 
 }
 
-/* Styling til brødteksten under overskriften */
 .slider-description {
     color: grey;
     font-size: 1.2em;
     line-height: 1.6;
-    text-align: center; /* Centrerer brødteksten */
-    max-width: 80%; /* Begrænser bredden af brødteksten */
-    margin: 0 auto; /* Centrerer brødteksten horisontalt */
-    margin-bottom: 20px; /* Lidt afstand til slideren */
+    text-align: center; 
+    max-width: 80%; 
+    margin: 0 auto; 
+    margin-bottom: 20px; 
 }
 
-/* Denne del fjerner cirklen og linjen på skærme under 768px */
 @media (max-width: 768px) {
     .text-content p::before,
     .text-content p::after {
-        content: none; /* Fjerner både cirklen og linjen */
+        content: none; 
     }
 
-    /* Eventuelle andre tilpasninger for skærme under 768px */
     .text-content h1 {
         font-size: 2.5em;
         padding-left: 0;
         text-align: center;
-        margin-top: 20px; /* Reducer margin-top for at få overskriften tættere på indholdet */
-        z-index: 0; /* Sørger for, at den ikke overlapper forkert */
+        margin-top: 20px; 
+        z-index: 0; 
     }
 
     .text-content p {
@@ -287,58 +264,55 @@
     .calendar-container {
         padding: 20px;
         box-shadow: none;
-        margin: 0 auto; /* Centrerer kalender-containeren */
-        z-index: 0; /* Sørger for, at den ikke overlapper forkert */
+        margin: 0 auto; 
+        z-index: 0; 
 
     }
 
-
     .slider-card {
-        flex: 0 0 50%; /* Vist 2 kort på skærme under 768px */
+        flex: 0 0 50%; 
     }
 
     .calendar-days {
-        gap: 30px; /* Mindre gap mellem dagene */
-        font-size: 1.1em; /* Juster fontstørrelsen */
+        gap: 30px; 
+        font-size: 1.1em; 
     }
 
     .calendar-grid {
-        gap: 15px; /* Mindre afstand mellem dagene */
+        gap: 15px; 
     }
 
     .text-content p::before,
     .text-content p::after {
-        content: none; /* Fjerner både cirklen og linjen */
+        content: none; 
     }
 
 }
 
 @media (max-width: 480px) {
-
-
     .kalender-main-title {
-        font-size: 2.5em; /* Juster fontstørrelse for små skærme */
-        text-align: center; /* Centrerer teksten */
-        padding-left: 0; /* Fjerner venstre padding */
-        margin-top: 20px; /* Justerer margin-top */
-        margin-bottom: 20px; /* Tilføjer lidt afstand under overskriften */
-        z-index: 0; /* Sørger for, at den ikke overlapper forkert */
+        font-size: 2.5em; 
+        text-align: center; 
+        padding-left: 0; 
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+        z-index: 0; 
     }
 
     .text-content p::before,
     .text-content p::after {
-        content: none; /* Fjerner både cirklen og linjen */
+        content: none; 
     }
 
     .calendar-days, .calendar-grid {
-        grid-template-columns: repeat(7, 1fr); /* 7 kolonner */
+        grid-template-columns: repeat(7, 1fr); 
         gap: 5px;
-        font-size: 1em; /* Mindre fontstørrelse for små skærme */
+        font-size: 1em; 
     }
 
     .calendar-container {
         box-shadow: none;
-        z-index: 0; /* Sørger for, at den ikke overlapper forkert */
+        z-index: 0; 
 
     }
 
@@ -347,15 +321,15 @@
     }
 
     .slider-card {
-        flex: 0 0 100%; /* Vis 1 kort på meget små skærme */
+        flex: 0 0 100%; 
     }
 
     .text-content h1 {
-        font-size: 2em; /* Mindre fontstørrelse på meget små skærme */
+        font-size: 2em; 
         padding-left: 0;
-        margin-top: 10px; /* Mindre afstand til toppen */
+        margin-top: 10px; 
         text-align: center;
-        z-index: 0; /* Sørger for, at den ikke overlapper forkert */
+        z-index: 0; 
 
     }
 
@@ -366,12 +340,10 @@
         text-align: center;
     }
 
-    /* Juster padding på slider-container for små skærme */
     .slider-container {
         padding: 0px;
     }
 
-    /* Juster knapstørrelse for små skærme */
     .select-button {
         font-size: 1em;
         padding: 10px 20px;
@@ -383,11 +355,11 @@
 
     .main-container {
         display: flex;
-        flex-direction: column; /* Behold vertikalt layout */
-        align-items: center; /* Centrerer indholdet horisontalt */
-        justify-content: center; /* Centrerer indholdet vertikalt */
-        margin: 0 auto; /* Sørger for, at containeren centrerer på skærmen */
-        z-index: 0; /* Sørger for, at den ikke overlapper forkert */
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        margin: 0 auto; 
+        z-index: 0; 
     }
     
 }

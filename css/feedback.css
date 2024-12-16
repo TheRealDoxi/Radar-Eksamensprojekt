@@ -4,8 +4,8 @@
     justify-content: center;
     padding: 20px;
     gap: 100px; 
-    max-width: 1200px; /* Sætter en maksimal bredde for containeren */
-    margin: 0 auto; /* Centrerer containeren horisontalt */
+    max-width: 1200px; 
+    margin: 0 auto; 
   }
   
   h1 {
@@ -18,7 +18,7 @@
     color: #ffffff;
     line-height: 1.6;
     margin-top: 6px;
-    margin-bottom: 20px; /* Tilføjet margin-bottom for bedre afstand mellem tekst og knap */
+    margin-bottom: 20px; 
   }
   
   .feedback-btn {
@@ -37,12 +37,12 @@
     width: 120%;
     height: auto;
     border-radius: 10px;
-    margin-left: 0; /* Fjerner unødvendig margin */
+    margin-left: 0; 
   }
   
   .feedback-box {
-    background-color: rgba(128, 128, 128, 0.2); /* Let grå baggrund med lav opacity */
-    border: 2px solid rgba(128, 128, 128, 0.5); /* Grå ramme med lidt gennemsigtighed */
+    background-color: rgba(128, 128, 128, 0.2); 
+    border: 2px solid rgba(128, 128, 128, 0.5); 
     border-radius: 10px;
     padding: 20px;
     margin-top: 40px;
@@ -56,14 +56,14 @@
 
   
   .feedback-content-1 {
-    margin-left: 260px; /* Margin til venstre */
-    margin-right: 200px; /* Margin til højre */
-    padding: 20px; /* Eventuel padding, hvis du vil have luft inde i boksen */
+    margin-left: 260px; 
+    margin-right: 200px; 
+    padding: 20px; 
 }
 
 .feedback-textbox {
-  width: 100%; /* Sørg for at tekstboksen ikke fylder hele bredden */
-  max-width: 10000px; /* Begræns bredden på tekstboksen */
+  width: 100%; 
+  max-width: 10000px; 
   height: 150px;
   background-color: white;
   border-radius: 10px;
@@ -72,7 +72,7 @@
   border: 1px solid #ccc;
   margin-top: 20px;
   resize: none;
-  box-sizing: border-box; /* Sørger for at padding ikke påvirker den totale bredde */
+  box-sizing: border-box; 
 }
   
   .question {
@@ -91,12 +91,12 @@
   
   .star {
     font-size: 30px;
-    color: #d3d3d3; /* Grå stjerner som standard */
+    color: #d3d3d3; 
     cursor: pointer;
   }
   
   .star.selected {
-    color: #A41045; /* Rød farve når valgt */
+    color: #A41045; 
   }
   
   .feedback-note {
@@ -136,56 +136,19 @@
     background-color: darkred;
   }
   
-  /* Responsivt design for mindre skærme */
-  @media (max-width: 768px) {
-    .feedback-container {
-      flex-direction: column; /* Skift til kolonne layout */
-      gap: 20px; /* Mindre gap på mobil */
-      text-align: center; /* Centrer tekst og knap på små skærme */
-      padding: 10px; /* Reducer padding på mobil */
-    }
   
-    .right-section img {
-      width: 100%; /* Gør billedet til 100% bredde på mobilen */
-      margin-left: 0; /* Fjerner marginen */
-    }
-  
-    h1 {
-      font-size: 6vh; /* Mindre font-størrelse på mobil */
-    }
-  
-    p {
-      font-size: 14px; /* Mindre font-størrelse på mobil */
-      margin-bottom: 15px; /* Justeret margin for bedre afstand */
-    }
-  
-    .feedback-btn {
-      font-size: 14px; /* Mindre font-størrelse på knappen */
-      padding: 10px 20px; /* Justeret padding på knappen for mobil */
-    }
-
-    .feedback-content-1 {
-      margin-left: 0px; /* Mindre margin på meget små skærme */
-      margin-right: 0px; /* Mindre margin på meget små skærme */
-  }
-
-
-
-  }
-  
-
   .thank-you-message {
-    display: none; /* Skjul beskeden som standard */
+    display: none; 
     text-align: center;
     margin-top: 20px;
-    background-color: #000000; /* Lys grøn baggrund */
-    color: #A41045; /* Grøn tekst */
+    background-color: #000000; 
+    color: #A41045; 
     border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 15px;
     font-size: 16px;
-    opacity: 0; /* Gør beskeden usynlig */
-    transition: opacity 0.5s ease-in-out; /* Tilføj overgang for at lave en blød fade-in effekt */
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
   }
   
   .thank-you-message p {
@@ -198,5 +161,39 @@
     font-size: 24px;
     margin-right: 10px;
     vertical-align: middle;
+  }
+  
+  @media (max-width: 768px) {
+    .feedback-container {
+      flex-direction: column; 
+      gap: 20px; 
+      text-align: center; 
+      padding: 10px; 
+    }
+  
+    .right-section img {
+      width: 100%; 
+      margin-left: 0; 
+    }
+  
+    h1 {
+      font-size: 6vh; 
+    }
+  
+    p {
+      font-size: 14px; 
+      margin-bottom: 15px; 
+    }
+  
+    .feedback-btn {
+      font-size: 14px; 
+      padding: 10px 20px; 
+    }
+
+    .feedback-content-1 {
+      margin-left: 0px; 
+      margin-right: 0px; 
+  }
+
   }
   
