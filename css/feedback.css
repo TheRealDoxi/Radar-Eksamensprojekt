@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    gap: 100px; /* Reduceret gap mellem de to sektioner */
+    gap: 100px; 
     max-width: 1200px; /* Sætter en maksimal bredde for containeren */
     margin: 0 auto; /* Centrerer containeren horisontalt */
   }
