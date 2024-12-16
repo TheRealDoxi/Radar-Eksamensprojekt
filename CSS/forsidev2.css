@@ -1,0 +1,361 @@
+.flex-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    padding: 50px; 
+    color: white; 
+    gap: 30px; 
+    margin-top: 100px;
+
+}
+
+.text-content {
+    max-width: 50%; 
+}
+
+.text-content h1 {
+    font-size: 4.5em; 
+    line-height: 1.2;
+    margin-bottom: 0px;
+}
+
+.text-content p {
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    padding: 10px 0; 
+}
+
+.image-content img {
+    max-width: 150%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-right: -20px; 
+}
+
+.flex-container-artister {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 25vh; 
+    padding: 50px; 
+    color: white; 
+    gap: 30px; 
+    text-align: center; 
+}
+
+.text-content-artister {
+    max-width: 50%; 
+}
+
+.text-content-artister h1 {
+    font-size: 4.5em;
+    margin-bottom: 40px; 
+    line-height: 1.2;
+}
+
+.text-content-artister p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.artists-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px; 
+    flex-wrap: wrap; 
+    padding: 50px;
+}
+
+.artist-card {
+    background-color: #121417; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px; 
+    width: 180px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+.artist-card:hover {
+    transform: translateY(-10px); 
+}
+
+.artist-image {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    overflow: hidden; 
+    border-radius: 50%; 
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+h3 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    color: #bbb; 
+    margin: 0;
+    font-weight: 600;
+}
+
+
+.artist-card a {
+    text-decoration: none; 
+    color: inherit; 
+    gap: 20px;
+}
+
+.artist-card a p {
+    color: #bbb; 
+    transition: color 0.3s ease; 
+    gap: 20px;
+}
+
+.artist-card a:hover p {
+    color: #fff; 
+}
+
+
+
+.read-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; 
+}
+
+.read-more-button {
+    background-color: #A41045; 
+    color: white; 
+    padding: 15px 30px; 
+    font-size: 1.2em; 
+    text-decoration: none; 
+    border-radius: 30px; 
+    transition: background-color 0.3s ease; 
+}
+
+.read-more-button:hover {
+    background-color: #8c0f36;
+}
+
+.flex-container-playliste{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    padding: 50px; 
+    color: white; 
+    gap: 30px; 
+}
+
+.text-content-playliste {
+    max-width: 50%; 
+    text-align: left;
+}
+
+.playliste-section {
+    margin-top: 20px;
+}
+
+.playliste-section p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    position: relative; 
+}
+
+.line {
+    width: 100%; 
+    height: 2px; 
+    background-color: #808080; 
+    border-radius: 50px; 
+    position: relative;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: -10px; 
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #808080; 
+    border-radius: 50%; 
+    transform: translateY(-50%);
+}
+
+
+.text-content-playliste h1 {
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text-content-playliste p {
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    padding: 10px 0; 
+}
+
+.image-content-playliste img {
+    max-width: 70%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-right: -20px; 
+}
+
+.playliste-section p a {
+    text-decoration: underline; 
+    color: #A41045; 
+    font-weight: bold; 
+    transition: all 0.3s ease; 
+}
+
+.playliste-section p a:hover {
+    color: #C32B59; 
+    text-decoration: none; 
+}
+
+@media (max-width: 768px) {
+    .flex-container, .flex-container-artister, .flex-container-playliste {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        padding: 20px; 
+    }
+
+    .text-content, .text-content-artister, .text-content-playliste {
+        max-width: 100%;
+        padding: 0 10px; 
+    }
+
+    .text-content h1, .text-content-artister h1, .text-content-playliste h1 {
+        font-size: 2.5em; 
+        margin-bottom: 20px; 
+    }
+
+    .text-content p, .text-content-artister p, .text-content-playliste p {
+        font-size: 1em; 
+        line-height: 1.6;
+        margin-bottom: 20px; 
+    }
+
+   
+    .image-content img, .image-content-playliste img {
+        max-width: 80%; 
+        height: auto;
+        margin: 20px auto; 
+    }
+
+    .artists-container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+    }
+
+    .artist-card {
+        width: 80%; 
+        margin-bottom: 20px; 
+    }
+
+    .artist-image {
+        width: 120px; 
+        height: 120px;
+    }
+
+    .read-more-container {
+        margin-top: 20px; 
+    }
+
+    .read-more-button {
+        font-size: 1em; 
+        padding: 10px 20px; 
+    }
+
+    .line {
+        width: 60%; 
+        margin: 0 auto; 
+    }
+
+    .line::before {
+        left: -5px; 
+    }
+
+    
+    .calendar-container {
+        width: 100%; 
+        padding: 20px; 
+        box-shadow: none; 
+    }
+
+    .calendar-days, .calendar-grid {
+        grid-template-columns: repeat(7, 1fr); 
+        gap: 10px; 
+        font-size: 1em; 
+    }
+
+    .day {
+        height: 40px; 
+    }
+
+    .slider-card {
+        flex: 0 0 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .slider-heading {
+        font-size: 2em; 
+    }
+
+    .slider-description {
+        font-size: 1em; 
+    }
+
+    .line {
+        display: none; 
+    }
+
+    .image-content-playliste img {
+        width: 70%; 
+        max-width: 300px; 
+        margin: 0 auto; 
+        display: block; 
+    }    
+
+}
+
+
+@media (max-width: 480px) {
+    .text-content h1, .text-content-artister h1, .text-content-playliste h1 {
+        font-size: 2em; 
+    }
+
+    .text-content p, .text-content-artister p, .text-content-playliste p {
+        font-size: 0.9em; 
+    }
+
+    .artist-card {
+        width: 100%; 
+    }
+
+    .read-more-button {
+        font-size: 1em; 
+    }
+
+    .slider-card {
+        flex: 0 0 100%; 
+    }
+
+    .line {
+        display: none; 
+    }
+    
+}
